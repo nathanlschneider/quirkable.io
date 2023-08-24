@@ -1,0 +1,18 @@
+@mixin height($height) {
+  height: #{$height}px;
+  border-radius: calc(#{$height}px * 0.5); /* 50% of height */
+}
+
+@mixin section_guts() {
+  max-width: var(--max-page-width);
+  padding: var(--main-pad);
+  padding-bottom: var(--section-pad);
+  margin: 0 auto;
+  height: 90vh;
+}
+
+@mixin main_grids {
+  position: relative;
+  display: grid;
+  grid-template-rows: 15% 1fr;
+}
