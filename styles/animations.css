@@ -1,1 +1,0 @@
-.fade-in{opacity:0;transition:.5s ease-in-out}.fade-in.active{opacity:1;transform:scale(1)}.fade-out{opacity:1;transition:.5s ease-in-out}.fade-out.inactive{opacity:0;transform:scale(0.85)}
