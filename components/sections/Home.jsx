@@ -47,7 +47,7 @@ const Home = (props) => {
 					>
 						Learn more
 					</Link>
-					<Hypno style={{ opacity: ".2", zIndex: "-1", position: "absolute", left: "-275px" }} />
+					<Hypno className={styles.svg} style={{ left: "-275px" }} />
 				</section>
 				<section className={styles.right_main_section}>
 				<AnimationWrapper>
@@ -60,7 +60,7 @@ const Home = (props) => {
 						alt={"Quirkable Labs"}
 					/>
 					</AnimationWrapper>
-					<Hypno2 style={{ position: "absolute", zIndex: "-1", opacity: ".2", top: "-200px" }} />
+					<Hypno2 className={styles.svg} style={{ top: "-200px" }} />
 				</section>
 			</section>
 		</section>

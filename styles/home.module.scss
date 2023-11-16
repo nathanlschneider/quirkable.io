@@ -1,19 +1,25 @@
 @import "./mixins/mixins.scss";
 
+.svg {
+	opacity: 0.2;
+	fill: var(--light-purple);
+	z-index: 2;
+	position: absolute;
+}
+
 .home {
 	&_inner {
 		@include section_guts;
-
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 95px 1fr;
 
 		.left_main_section {
-			
 			@include main_grids;
 			grid-template-rows: 1fr max-content 200px max-content 1fr;
 			grid-column: 1;
 			grid-row: 2;
+			
 		}
 		.right_main_section {
 			@include main_grids;
@@ -23,6 +29,9 @@
 		}
 		.center_grid_content {
 			grid-row: 2;
+		}
+		h1, h4, a, img, div{
+			z-index: 3;
 		}
 	}
 }
