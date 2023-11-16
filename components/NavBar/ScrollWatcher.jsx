@@ -22,7 +22,7 @@ const ScrollWatcher = () => {
   }, [scrollY]);
 
   useEffect(() => {
-    const topSection = document.querySelector("main > section");
+    const topSection = document.querySelector("main > div:first-of-type");
     setSectionHeight(Math.floor(topSection.getBoundingClientRect().height));
   }, []);
 

@@ -1,8 +1,6 @@
 @import "./mixins/mixins.scss";
 
 .home {
-	background: linear-gradient(180deg, #6640ff 0%, #1703ff 220%);
-
 	&_inner {
 		@include section_guts;
 
@@ -11,6 +9,7 @@
 		grid-template-rows: 95px 1fr;
 
 		.left_main_section {
+			
 			@include main_grids;
 			grid-template-rows: 1fr max-content 200px max-content 1fr;
 			grid-column: 1;
@@ -18,12 +17,9 @@
 		}
 		.right_main_section {
 			@include main_grids;
-			grid-template-rows: 22% 1fr;
+			align-self: center;
 			grid-column: 2;
 			grid-row: 2;
-			img {
-				transform: translateY(-2.5rem);
-			}
 		}
 		.center_grid_content {
 			grid-row: 2;

@@ -13,23 +13,19 @@ const Home = (props) => {
 			<section className={styles.home_inner}>
 				<section className={styles.left_main_section}>
 					<h1 className={`${styles.center_grid_content} ${lexend_deca.className} ${styles.fade_in}`}>
-						<AnimationWrapper delay={"0"}>
-							Quirkable is here to help make the web
-							<br />
-							work for{" "}
-							<span style={{ position: "relative" }}>
-								you.
-								<span style={{ position: "absolute", bottom: "-5px", left: "0", zIndex: "-1" }}>
-									<Squig />
-								</span>
+						Quirkable is here to help make the web
+						<br />
+						work for{" "}
+						<span style={{ position: "relative" }}>
+							you.
+							<span style={{ position: "absolute", bottom: "-5px", left: "0", zIndex: "-1" }}>
+								<Squig />
 							</span>
-						</AnimationWrapper>
+						</span>
 					</h1>
 					<h4 className={nunito.className} style={{ gridRow: "3", marginTop: "30px", maxWidth: "480px" }}>
-						<AnimationWrapper delay={".3"}>
-							Empowering small business to convert clicks to clients with our eCommerce, CMS and SaaS
-							add-on solutions.
-						</AnimationWrapper>
+						Empowering small business to convert clicks to clients with our eCommerce, CMS and SaaS add-on
+						solutions.
 					</h4>
 					<Link
 						style={{
@@ -54,6 +50,7 @@ const Home = (props) => {
 					<Hypno style={{ opacity: ".2", zIndex: "-1", position: "absolute", left: "-275px" }} />
 				</section>
 				<section className={styles.right_main_section}>
+				<AnimationWrapper>
 					<Image
 						className={styles.center_grid_content}
 						src='/images/workstation.png'
@@ -62,6 +59,7 @@ const Home = (props) => {
 						height={1009}
 						alt={"Quirkable Labs"}
 					/>
+					</AnimationWrapper>
 					<Hypno2 style={{ position: "absolute", zIndex: "-1", opacity: ".2", top: "-200px" }} />
 				</section>
 			</section>

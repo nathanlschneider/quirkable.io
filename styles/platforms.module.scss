@@ -1,8 +1,6 @@
 @import "./mixins/mixins.scss";
 
 .platforms {
-    // background-color: var(--gray);
-    background-color: #d2c3ff;
     &_inner {
         @include section_guts;
         max-width: var(--max-page-width);
