@@ -1,9 +1,7 @@
-import * as React from "react"
 const Prism = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
-    style={{width: "inherit", height: "inherit"}}
     viewBox="0 0.8 24 22.5"
     {...props}
   >

@@ -1,20 +1,25 @@
 @import "./mixins/mixins.scss";
 
+.wave {
+    position: absolute;
+    z-index: 1;
+    opacity: var(--opacity);
+    bottom: 0;
+    fill: var(--light-fill);
+    width: 100vw;
+}
+
+.prism {
+    grid-column: 1;
+    grid-row: 1 /span 3;
+    align-self: center;
+    max-width: 500px;
+    z-index: 2;
+}
+
 .about {
     position: relative;
-    &:before {
-        content: "";
-        position: absolute;
-        width: 100vw;
-        height: 20px;
-        top: -20px;
-    }
-    svg {
-        position: absolute;
-        z-index: 0;
-        opacity: var(--opacity);
-        bottom: 0;
-    }
+   
     &_inner {
         @include section_guts;
         position: relative;

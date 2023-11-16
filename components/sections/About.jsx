@@ -1,7 +1,7 @@
 import Wave from "@components/Wave";
+import Prism from "@components/Prism";
 import styles from "@styles/about.module.scss";
 import { lexend_deca, nunito } from "../../app/fonts";
-
 
 const About = (props) => {
 	return (
@@ -23,8 +23,11 @@ const About = (props) => {
 					staying ahead of the curve and continually improving our skills to deliver cutting-edge software
 					solutions for our clients.
 				</h4>
+				<Prism className={styles.prism} />
+				<div className={styles.wave}>
+					<Wave />
+				</div>
 			</section>
-			<Wave width='100%' fill='#616af1' />
 		</section>
 	);
 };

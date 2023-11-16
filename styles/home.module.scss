@@ -1,8 +1,8 @@
 @import "./mixins/mixins.scss";
 
 .svg {
-	opacity: 0.2;
-	fill: var(--light-purple);
+	opacity: .2;
+	fill: var(--light-fill);
 	z-index: 2;
 	position: absolute;
 }
