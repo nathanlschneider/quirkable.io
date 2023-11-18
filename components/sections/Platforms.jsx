@@ -3,6 +3,7 @@ import WordPress from "@components/Logos/WordPress";
 import Basecamp from "@components/Logos/Basecamp";
 import Shopify from "@components/Logos/Shopify";
 import WooCommerce from "@components/Logos/WooCommerce";
+import Shifter from "@components/Shifter";
 import { lexend_deca, nunito } from "../../app/fonts";
 import styles from "@styles/platforms.module.scss";
 
@@ -22,11 +23,12 @@ const Platforms = (props) => {
 						gap: "20px 40px",
 					}}
 				>
-					<h5 style={{ color: "#fff" }}>APPS</h5>
+					<h5 style={{ color: "var(--pink)" }}>APPS</h5>
 					<h1 style={{ color: "#fff", fontSize: "46px" }} className={`${lexend_deca.className}`}>
 						Platforms we build solutions for
 					</h1>
 				</div>
+				<Shifter className={styles.shifter} />
 				<div
 					style={{
 						display: "flex",

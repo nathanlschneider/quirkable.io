@@ -16,9 +16,11 @@
 	--grayscale: 1;
 	--gray: #efefef;
 	--dark-gradient: #141322;
+	--medium-gradient: var(--pink);
 	--light-gradient: var(--deep-purple);
 	--fill: #442ed0;
 	--light-fill: #4388e0;
+	--shifty: #6949e9;
 }
 /* Spec Vars */
 :root {
@@ -43,11 +45,12 @@ body {
 }
 
 main {
-	overflow: hidden;
+	overflow-x: hidden;
 }
 
 footer {
-	position: relative;
+	position: sticky;
+	bottom: 0;
 }
 
 @media (max-width: 560px) {
@@ -57,7 +60,6 @@ footer {
 }
 
 body {
-	//background: linear-gradient(180deg, #6640ff 0%, #1703ff 220%);
 	overflow-x: hidden;
 }
 

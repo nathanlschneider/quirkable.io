@@ -1,5 +1,16 @@
 @import "./mixins/mixins.scss";
 
+
+@keyframes rotate {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}
+
 .wave {
     position: absolute;
     z-index: 1;
@@ -9,14 +20,42 @@
     width: 100vw;
 }
 
+
+.twist {
+    position: absolute;
+    z-index: 1;
+    opacity: var(--opacity);
+    bottom: 0;
+    width: 100vw;
+    --a: red;
+    --b: blue;
+}
+
 .prism {
     grid-column: 1;
-    grid-row: 1 /span 3;
+    grid-row: 1/span 3;
     align-self: center;
     max-width: 500px;
     z-index: 2;
+    animation: rotate linear;
+    animation-timeline: scroll(root block);
+    justify-self: center;
+    fill: #6640ff;
+    filter: drop-shadow(1px -15px 20px rgba(0, 0, 0, 0.3333333333));
 }
 
+.cms {
+    justify-self: center;
+    grid-column: 1;
+    grid-row: 1/span 3;
+    align-self: center;
+    max-width: 200px;
+    z-index: 2;
+    left: 227px;
+    position: absolute;
+    top: 45px;
+
+}
 .about {
     position: relative;
    

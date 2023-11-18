@@ -2,6 +2,7 @@ import "./globals.scss";
 import Footer from "@components/Footer";
 import Nav from "@components/NavBar/Nav";
 import { inter } from "../app/fonts";
+import Newsletter from "@components/sections/Newsletter";
 
 export const metadata = {
   title: "Quirkable.io",
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
         </header>
         <main>{children}</main>
         <Footer />
+        <Newsletter />
       </body>
     </html>
   );

@@ -15,4 +15,5 @@
 @mixin main_grids {
 	position: relative;
 	display: grid;
+	align-self: center;
 }

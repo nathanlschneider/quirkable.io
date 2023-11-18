@@ -1,5 +1,16 @@
 @import "./mixins/mixins.scss";
 
+.shifter {
+    position: absolute;
+    z-index: 1;
+    opacity: var(--opacity);
+    bottom: 9px;
+    fill: var(--shifty);
+    width: 780px;
+    left: calc(50% - 780px / 2);
+    z-index: -1;
+}
+
 .platforms {
     &_inner {
         @include section_guts;
@@ -17,7 +28,12 @@
         h3 {
             font-weight: bold;
             margin-bottom: 10px;
+            color: #fff;
         }
-        height: unset;
+
+        p {
+            color: #fff;
+        }
+        // height: unset;
     }
 }

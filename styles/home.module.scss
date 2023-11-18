@@ -7,6 +7,15 @@
 	position: absolute;
 }
 
+.shifty {
+    position: absolute;
+    z-index: 1;
+    opacity: var(--opacity);
+    top: 0;
+    fill: var(--shifty);
+    width: 1000px;
+}
+
 .home {
 	&_inner {
 		@include section_guts;
@@ -16,14 +25,12 @@
 
 		.left_main_section {
 			@include main_grids;
-			grid-template-rows: 1fr max-content 200px max-content 1fr;
+			// grid-template-rows: 1fr max-content 200px max-content 1fr;
 			grid-column: 1;
 			grid-row: 2;
-			
 		}
 		.right_main_section {
 			@include main_grids;
-			align-self: center;
 			grid-column: 2;
 			grid-row: 2;
 		}
