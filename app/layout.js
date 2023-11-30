@@ -4,9 +4,10 @@ import Nav from "@components/NavBar/Nav";
 import { inter } from "../app/fonts";
 import Newsletter from "@components/sections/Newsletter";
 
+
 export const metadata = {
   title: "Quirkable.io",
-  description: "Micro Web Services",
+  description: "Where innovation meets functionality.",
 };
 
 export default function RootLayout({ children }) {
@@ -17,8 +18,8 @@ export default function RootLayout({ children }) {
           <Nav />
         </header>
         <main>{children}</main>
-        <Footer />
-        <Newsletter />
+        {/* <Footer /> */}
+        {/* <Newsletter /> */}
       </body>
     </html>
   );

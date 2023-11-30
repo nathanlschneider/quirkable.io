@@ -1,33 +1,19 @@
 import Prism from "@components/Prism";
 import styles from "@styles/about.module.scss";
 import { lexend_deca, nunito } from "../../app/fonts";
-import Shifty from "@components/Shifty";
-import Plug from "@components/Plug";
-import CMS from "@components/CMS";
-import Cog from "@components/Cog";
+import Curve from "@components/Curve";
 
 const About = (props) => {
 	return (
 		<section className={styles.about}>
+			<Curve/>
 			<section className={styles.about_inner}>
-				<h5>ABOUT</h5>
-				<h1 style={{ color: "var(--deep-purple)", fontSize: "46px" }} className={`${lexend_deca.className}`}>
-					Let us help solve your problems
-				</h1>
-				<h4 style={{ color: "#000" }}>
-					Our mission is to create quality software that exceeds our clients' expectations by utilizing
-					industry-leading coding standards and up-to-date web development technologies. We strive to build
-					long-lasting partnerships with our clients by delivering reliable software solutions that are
-					scalable, secure, and user-friendly.
-					<br />
-					<br /> Our team of experienced developers is committed to providing exceptional customer service and
-					making sure our clients' needs are met. With a focus on quality code, we deliver software solutions
-					that not only meet current expectations but also exceed them for years to come. We believe in
-					staying ahead of the curve and continually improving our skills to deliver cutting-edge software
-					solutions for our clients.
-				</h4>
-				<Cog className={styles.prism} />
-				<CMS className={styles.cms} />
+			<h2 className={styles.h2}>Stuff You Need To Know.</h2>
+			
+			<div className={styles.body_a}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam sunt laborum molestiae soluta esse provident, modi, dolorem dolore tenetur minus, eos officiis voluptatibus animi voluptas facilis ipsam in officia ducimus!</div>
+			<div className={styles.body_b}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam sunt laborum molestiae soluta esse provident, modi, dolorem dolore tenetur minus, eos officiis voluptatibus animi voluptas facilis ipsam in officia ducimus!</div>
+			<div className={styles.body_c}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam sunt laborum molestiae soluta esse provident, modi, dolorem dolore tenetur minus, eos officiis voluptatibus animi voluptas facilis ipsam in officia ducimus!</div>
+			<div className={styles.body_d}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam sunt laborum molestiae soluta esse provident, modi, dolorem dolore tenetur minus, eos officiis voluptatibus animi voluptas facilis ipsam in officia ducimus!</div>
 			</section>
 		</section>
 	);

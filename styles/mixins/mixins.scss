@@ -4,16 +4,9 @@
 }
 
 @mixin section_guts {
-	max-width: var(--max-page-width);
-	@media (max-width: 1400px) {
-		padding: var(--main-pad);
+	&_inner {
+		max-width: var(--max-page-width);
+		margin: 0 auto;
+		height: 100vh;
 	}
-	margin: 0 auto;
-	height: 100vh;
-}
-
-@mixin main_grids {
-	position: relative;
-	display: grid;
-	align-self: center;
 }

@@ -20,6 +20,6 @@ const UserLogin = () => {
     fetchData().catch(console.error);
   }, []);
 
-  return <>{session.authenticated ? <AccountMenu userImage={session.session.user.image} userName={session.session.user.name} userEmail={session.session.user.email}/> : <Link href="/login">Login <LoginIcon/></Link>}</>;
+  return <>{session.authenticated ? <AccountMenu userImage={session.session.user.image} userName={session.session.user.name} userEmail={session.session.user.email}/> : <Link href="/login">login <LoginIcon/></Link>}</>;
 };
 export default UserLogin;

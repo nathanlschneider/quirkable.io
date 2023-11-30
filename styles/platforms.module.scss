@@ -2,12 +2,11 @@
 
 .shifter {
     position: absolute;
-    z-index: 1;
     opacity: var(--opacity);
-    bottom: 9px;
+    bottom: 20px;
     fill: var(--shifty);
-    width: 780px;
-    left: calc(50% - 780px / 2);
+    width: 642px;
+    left: calc(50% - 321px);
     z-index: -1;
 }
 

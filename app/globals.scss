@@ -33,6 +33,7 @@
 	--nav-height: 95px;
 	--transition: 0.3s;
 	--opacity: 0.4;
+	--mix-mode: none;
 }
 
 :focus-visible {
@@ -41,17 +42,13 @@
 
 html,
 body {
-	height: 100%;
+	background: #000000;
 }
 
 main {
 	overflow-x: hidden;
 }
 
-footer {
-	position: sticky;
-	bottom: 0;
-}
 
 @media (max-width: 560px) {
 	:root {
