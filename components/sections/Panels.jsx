@@ -1,4 +1,5 @@
 import styles from "@styles/panels.module.scss";
+import Image from "next/image";
 import { lexend_deca, nunito } from "../../app/fonts";
 
 const Panels = () => {
@@ -11,19 +12,15 @@ const Panels = () => {
 						Services
 					</h2>
 				</div>
-				<div
-					style={{
-						textAlign: "right",
-						maxWidth: "400px",
-						position: "absolute",
-						right: "6px",
-						fontSize: "2rem",
-					}}
-				>
+				<aside className={styles.aside}>
 					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio blanditiis explicabo quis ab
 					doloribus in quos esse pariatur, modi repellat impedit eius asperiores, alias voluptatem ipsam quasi
 					dolorem officiis fuga.
-				</div>
+				</aside>
+				<Image className={styles.cube} src='/images/cube.png' width={600} height={600} alt='' />
+				<Image className={styles.cube2} src='/images/cube.png' width={600/2} height={600/2} alt='' />
+				<Image className={styles.cube3} src='/images/cube.png' width={600/3} height={600/3} alt='' />
+
 				<div className={styles.cards}>
 					<div className={styles.card}>
 						<h2>Plugins & Addons</h2>

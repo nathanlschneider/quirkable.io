@@ -14,7 +14,7 @@ const About = (props) => {
 			<div className={styles.body_b}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam sunt laborum molestiae soluta esse provident, modi, dolorem dolore tenetur minus, eos officiis voluptatibus animi voluptas facilis ipsam in officia ducimus!</div>
 			<div className={styles.body_c}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam sunt laborum molestiae soluta esse provident, modi, dolorem dolore tenetur minus, eos officiis voluptatibus animi voluptas facilis ipsam in officia ducimus!</div>
 			<div className={styles.body_d}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Numquam sunt laborum molestiae soluta esse provident, modi, dolorem dolore tenetur minus, eos officiis voluptatibus animi voluptas facilis ipsam in officia ducimus!</div>
-			<Image className={styles.cube} src='/images/cube.png' width={600} height={600} alt='' />
+			<Image className={styles.cube} src='/images/wheel.webp' width={600} height={600} alt='' />
 
 			</section>
 		</section>
