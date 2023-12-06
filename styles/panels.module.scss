@@ -1,0 +1,66 @@
+@import "mixins/mixins.scss";
+
+.panels {
+	@include section_guts;
+	z-index: 1;
+	&_inner {
+		max-width: var(--max-page-width);
+		color: #fff;
+		.header {
+			margin: 7rem 0rem;
+			h2 {
+				text-align: right;
+			}
+		}
+		.cards {
+			top: -204px;
+			position: relative;
+			display: flex;
+			flex-wrap: wrap;
+			max-width: 87%;
+			.card {
+				width: 30%;
+				color: #fff;
+				padding: 0% 4% 3% 2%;
+				line-height: 34px;
+				background: linear-gradient(346deg, rgb(111 110 110 / 40%) 0%, rgb(0, 0, 0) 80%);
+				border-bottom-right-radius: 60px;
+				border-bottom-left-radius: 0px;
+				margin: 20px;
+
+				h2 {
+					color: inherit;
+					font-size: 1.2rem;
+					text-transform: uppercase;
+					font-weight: 800;
+					margin-bottom: 30px;
+					position: relative;
+					display: inline-block;
+					&:after {
+						position: absolute;
+
+						content: "";
+						width: 100%;
+						height: 16px;
+						bottom: -16px;
+						left: 0px;
+						margin-top: 10px;
+						background-image: linear-gradient(
+							45deg,
+							hsl(240deg 100% 20%) 0%,
+							hsl(289deg 100% 21%) 11%,
+							hsl(315deg 100% 27%) 22%,
+							hsl(329deg 100% 36%) 33%,
+							hsl(337deg 100% 43%) 44%,
+							hsl(357deg 91% 59%) 56%,
+							hsl(17deg 100% 59%) 67%,
+							hsl(34deg 100% 53%) 78%,
+							hsl(45deg 100% 50%) 89%,
+							hsl(55deg 100% 50%) 100%
+						);
+					}
+				}
+			}
+		}
+	}
+}

@@ -33,20 +33,35 @@
 	}
 }
 
+@keyframes kilter {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(-20deg);
+	}
+}
+
 .quirk {
 	fill: #000;
 	width: 200px;
 }
+.cube {
+	position: absolute;
+    left: -100px;
+    bottom: -255px;
+	filter: drop-shadow(0px 0px 39px #00000055);
+}
+
 .about {
 	@include section_guts;
 	position: relative;
 	background-color: #fff;
 	color: #000;
-	animation: translate linear;
-	animation-timeline: scroll(root block);
-	height: 100vh;
-	top: 20vw;
-
+	//animation: translate linear;
+	//animation-timeline: scroll(root block);
+	z-index: 9;
+	overflow: hidden;
 	&_inner {
 		display: grid;
 		grid-template-columns: repeat(8, 1fr);
@@ -74,6 +89,11 @@
 			font-weight: 600;
 			grid-row: 2 / span 3;
 			grid-column: 2 / span 3;
+			animation: kilter linear;
+			animation-timeline: scroll(root);
+			transform-origin: top right;
+			position: relative;
+			z-index: 9;
 		}
 
 		div.body_a {

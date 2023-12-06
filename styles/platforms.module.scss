@@ -11,6 +11,7 @@
 }
 
 .platforms {
+    z-index: 1;
     &_inner {
         @include section_guts;
         max-width: var(--max-page-width);

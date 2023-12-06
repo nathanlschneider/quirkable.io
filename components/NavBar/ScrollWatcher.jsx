@@ -10,7 +10,6 @@ const ScrollWatcher = () => {
   const breakPoint = 440;
 
   function logit() {
-    console.log(window.scrollY);
     setScrollY(window.scrollY);
     // set css vars here
     scrollY > breakPoint ? document.documentElement.style.setProperty("--mix-mode", "difference") : document.documentElement.style.setProperty("--mix-mode", "normal");
@@ -26,7 +25,7 @@ const ScrollWatcher = () => {
   }, [scrollY]);
 
   useEffect(() => {
-    const topSection = document.querySelector("main > section:first-of-type");
+    const topSection = document.querySelector("body > section:first-of-type");
     setSectionHeight(Math.floor(topSection.getBoundingClientRect().height));
   }, []);
 

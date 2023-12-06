@@ -1,0 +1,44 @@
+.tribe-events-view--list {
+    .tribe-common-l-container.tribe-events-l-container{
+        .tribe-events-calendar-list {
+
+            .tribe-events-calendar-list__event-row {
+                display: none;
+            }
+
+        }
+    }
+}
+
+
+
+
+
+
+
+<style>
+.tribe-events-calendar-list__event-row {
+        height: 25px;
+        overflow: hidden;
+        transition: 1s all;
+        cursor: pointer;
+        background-color: #efefef;
+        margin: 0px !important;
+}
+
+.hider {
+    height: unset !important;
+    overflow: visible !important;
+}
+
+</style>
+<script>
+console.log('loaded')
+window.addEventListener('DOMContentLoaded', ()=>{
+    const rows = document.querySelectorAll('.tribe-events-calendar-list__event-row');
+    rows.forEach(row=>row.onclick=(d)=>row.classList.toggle('hider'))             
+});
+</script>
+<?php
+
+?>

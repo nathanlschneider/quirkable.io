@@ -34,21 +34,17 @@
 	--transition: 0.3s;
 	--opacity: 0.4;
 	--mix-mode: none;
+	--hero-zindex: 9;
 }
 
 :focus-visible {
 	outline: -webkit-focus-ring-color auto 0px;
 }
 
-html,
-body {
+html {
 	background: #000000;
-}
-
-main {
 	overflow-x: hidden;
 }
-
 
 @media (max-width: 560px) {
 	:root {
@@ -57,13 +53,16 @@ main {
 }
 
 body {
-	overflow-x: hidden;
 }
-
 header {
 	position: relative;
 	display: flex;
 	justify-content: center;
+}
+
+section {
+	position: relative;
+	height: 100vh;
 }
 
 h1 {
@@ -72,6 +71,11 @@ h1 {
 	/* line-height: clamp(34px, 52px, 73px); */
 	font-weight: 400;
 	text-transform: capitalize;
+}
+
+h2 {
+	font-size: 7rem;
+	font-weight: 600;
 }
 
 h4 {
@@ -91,28 +95,3 @@ h5 {
 	text-transform: uppercase;
 }
 
-
-
-.squiggly {
-	display: inline-block !important;
-	position: relative;
-	&:after {
-		position: absolute;
-		content: "";
-		background-image: url("../public/images/squig.svg");
-		width: 100%;
-		height: 100%;
-		bottom: -20px;
-		left: -23px;
-	}
-}
-
-.btn {
-	color: #fff;
-	text-transform: uppercase;
-	background-color: var(--deep-purple);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-weight: 600;
-}

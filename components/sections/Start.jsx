@@ -1,9 +1,9 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Image from "next/image";
 import styles from "@styles/start.module.scss";
-import Asteroid from "./Asteroid";
-import CustomMousePointer from '@components/MousePointer';
+import Asteroid from '@components/Asteroid';
+// import CustomMousePointer from '@components/MousePointer';
 
 const Start = (props) => {
 
@@ -19,7 +19,7 @@ const Start = (props) => {
 	return (
 		<section className={styles.start} onClick={handleClick}>
 			<section className={styles.start_inner}>
-			<CustomMousePointer />
+			{/* <CustomMousePointer /> */}
 
 				<div className={styles.plus_wrapper}>
 					<Image className={styles.plus} src='/images/plus.png' width={950} height={1050} alt='' />

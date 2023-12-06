@@ -2,9 +2,11 @@
 	0% {
 		opacity: 1;
 	}
-	50% {
+
+	45% {
 		opacity: 0;
 	}
+
 	100% {
 		opacity: 0;
 	}
@@ -20,11 +22,21 @@
 }
 @keyframes across {
 	0% {
-		transform: translateX(0px);
+		transform: translateY(0);
 	}
 
 	100% {
-		transform: translateX(1000px);
+		transform: translateY(-15vw);
+	}
+}
+
+@keyframes rise {
+	0% {
+		transform: translateY(0);
+	}
+
+	100% {
+		transform: translateY(-20vw);
 	}
 }
 @keyframes spin {
@@ -63,16 +75,17 @@
 		font-weight: 700;
 		filter: drop-shadow(0px 0px 20px #00000055);
 		text-transform: uppercase;
-		text-align: left;
+		text-align: center;
 		position: relative;
-		z-index: 8;
+		z-index: var(--hero-zindex);
+		animation: rise linear;
+		animation-timeline: scroll(root block);
+		justify-self: center;
+		align-self: center;
 	}
 }
 .start {
-	cursor: none;
-	position: relative;
 	z-index: 1;
-	height: 100vh;
 	display: grid;
 	animation: fader linear;
 	animation-timeline: scroll(root block);
@@ -82,6 +95,7 @@
 		max-width: 1366px;
 		align-self: center;
 		justify-self: center;
+		display: grid;
 
 		.plus {
 			animation: 2400s linear 1s infinite forwards plus;
@@ -114,10 +128,14 @@
 			animation: 40s linear 1s infinite forwards spin;
 
 			&_wrapper {
-				animation: 400s linear 1s infinite forwards across;
+				animation: linear 1s forwards across;
 				opacity: 0.95;
 				position: absolute;
 				transform-origin: center;
+				offset-path: path(
+					"M 264.981 85.964 C 258.351 85.964 250.459 92.327 244.345 94.7 C 218.965 104.548 190.15 124.891 208.701 153.98 C 221.264 173.681 235.255 194.83 251.849 211.389 C 276.32 235.808 311.485 257.058 325.638 290.014 C 330.403 301.107 324.054 312.101 316.884 320.278 C 301.013 338.377 277.693 351.05 253.099 349.606 C 218.959 347.602 198.967 299.254 202.447 269.733 C 203.383 261.793 203.924 252.922 206.824 245.397 C 210.546 235.742 217.747 227.517 223.709 219.189 C 243.706 191.252 272.009 168.7 289.369 139.004 C 291.842 134.774 293.497 129.702 294.684 124.964 C 301.034 99.621 275.187 86.588 254.975 86.588"
+				);
+				animation: move 30s infinite alternate ease-in-out;
 			}
 		}
 	}
