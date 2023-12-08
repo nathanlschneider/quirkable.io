@@ -41,6 +41,30 @@
 	}
 }
 
+@keyframes slidein {
+	0% {
+		transform: translateX(-60vw);
+	}
+	30% {
+		transform: translateX(0px);
+	}
+	100% {
+		transform: translateX(0px);
+	}
+}
+
+@keyframes pushin {
+	0% {
+		transform: translateX(60vw);
+	}
+	30% {
+		transform: translateX(0px);
+	}
+	100% {
+		transform: translateX(0px);
+	}
+}
+
 .quirk {
 	fill: #000;
 	width: 200px;
@@ -63,8 +87,8 @@
 	overflow: hidden;
 	&_inner {
 		display: grid;
-		grid-template-columns: repeat(8, 1fr);
-		grid-template-rows: repeat(8, calc(1366px / 8));
+		//grid-template-columns: repeat(8, 1fr);
+		//grid-template-rows: repeat(8, calc(1366px / 8));
 		color: inherit;
 		* {
 			color: inherit;
@@ -84,13 +108,16 @@
 		}
 
 		.quote {
+			margin: 0 20px;
 			grid-column: 5/9;
 			grid-row: 3;
+			animation: pushin linear;
+			animation-timeline: scroll(root);
 			&_title {
 				font-size: 6rem;
 				font-weight: 600;
 				position: relative;
-				left: -10px
+				left: -10px;
 			}
 			&_pronun {
 				font-size: 2rem;
@@ -101,62 +128,42 @@
 				max-width: 500px;
 				& > li {
 					position: relative;
-					margin-left:27px;
+					margin-left: 27px;
 					&:first-of-type p:before {
 						content: "01";
 						position: absolute;
 						left: -32px;
-						font-weight: 800;
+						font-weight: 600;
 					}
 					&:last-of-type p:before {
 						content: "02";
 						position: absolute;
 						left: -32px;
-						font-weight: 800;
+						font-weight: 600;
 					}
 				}
 				em {
 					display: inline-block;
 					margin: 5px 0px 10px 0px;
 					font-weight: 300;
-
 				}
 			}
 		}
 
 		h2.h2 {
+			margin: 0 20px;
 			font-size: 7rem;
 			font-weight: 600;
-			grid-row: 2 / span 3;
+			grid-row: 3 / span 3;
 			grid-column: 2 / span 3;
-
 			position: relative;
 			z-index: 9;
-		}
-
-		div.body_a {
-			grid-row: 2;
-			&:before {
-				content: "01";
-			}
-		}
-		div.body_b {
-			grid-row: 3;
-			&:before {
-				content: "02";
-			}
-		}
-		div.body_c {
-			grid-row: 4;
-			&:before {
-				content: "03";
-			}
-		}
-		div.body_d {
-			grid-row: 5;
-			&:before {
-				content: "04";
-			}
+			animation: slidein linear;
+			animation-timeline: scroll(root);
+			text-align: end;
+			border-right: 10px solid;
+			padding-right: 27px;
+			max-height: 400px;
 		}
 	}
 }

@@ -31,6 +31,7 @@
 	z-index: 1;
 
 	aside.aside {
+		margin: 0 20px;
 		text-align: right;
 		max-width: 400px;
 		position: absolute;
@@ -42,7 +43,7 @@
 		max-width: var(--max-page-width);
 		color: #fff;
 		.header {
-			margin: 7rem 0rem;
+			margin: 7rem 20px;
 			h2 {
 				text-align: right;
 			}

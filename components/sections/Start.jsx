@@ -26,7 +26,17 @@ const Start = (props) => {
 				</div>
 				<div className={styles.plus_wrapper_b}>
 					<Image className={styles.plus_b} src='/images/plus.png' width={950/2} height={1050/2} alt='' />
-				</div>			
+				</div>
+				<Asteroid key={100} />
+				<Asteroid key={101} />
+				<Asteroid key={102} />
+				<Asteroid key={103} />
+				<Asteroid key={104} />
+				<Asteroid key={105} />
+				<Asteroid key={106} />
+				<Asteroid key={107} />
+				<Asteroid key={108} />
+				<Asteroid key={109} />
 				{asteroidField}
 				<h1 style={{userSelect: 'none'}} className={styles.xxl_h1}>Make The Web Work For You</h1>
 			</section>

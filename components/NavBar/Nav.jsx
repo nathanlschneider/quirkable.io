@@ -1,25 +1,21 @@
-import Link from "next/link";
 import Burger from "@components/NavBar/Burger";
-import StripeLogo from "@components/NavBar/StripeLogo";
 import styles from "@styles/nav.module.scss";
 import UserLogin from "./UserLogin";
 import NavLinks from "@components/NavBar/NavLinks";
 import ScrollWatcher from "./ScrollWatcher";
+import LinkedLogo from "@components/NavBar/LinkedLogo";
 
-const Nav = () => {
+const Nav = (props) => {
 	return (
 		<nav className={styles.nav}>
 			<div className={styles.nav_left}>
-				<Link href='/' className={styles.logo}>
-					<StripeLogo className={styles.logo_image} />
-					<div className={styles.logo_title}>Quirkable</div>
-				</Link>
+				<LinkedLogo color={props.color}/>
 			</div>
 			<div className={styles.nav_right}>
 				<NavLinks />
 				<UserLogin />
 			</div>
-			<ScrollWatcher/>
+			<ScrollWatcher />
 		</nav>
 	);
 };

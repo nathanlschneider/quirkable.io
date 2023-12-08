@@ -102,6 +102,7 @@
 	margin: 0 auto;
 	top: var(--top);
 	mix-blend-mode: var(--mix-mode);
+	visibility: var(--visibility);
 
 	&_left {
 		display: flex;

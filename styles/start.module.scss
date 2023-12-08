@@ -11,7 +11,6 @@
 		opacity: 0;
 	}
 }
-
 @keyframes move {
 	0% {
 		offset-distance: 0%;
@@ -29,14 +28,13 @@
 		transform: translateY(-15vw);
 	}
 }
-
 @keyframes rise {
 	0% {
 		transform: translateY(0);
 	}
 
 	100% {
-		transform: translateY(-20vw);
+		transform: translateY(-40vw);
 	}
 }
 @keyframes spin {
@@ -98,7 +96,7 @@
 		display: grid;
 
 		.plus {
-			animation: 2400s linear 1s infinite forwards plus;
+			animation: 240s linear 1s infinite forwards plus;
 			transform-origin: center;
 			&_wrapper {
 				offset-path: path(
