@@ -37,15 +37,6 @@
 		transform: translateY(-40vw);
 	}
 }
-@keyframes spin {
-	0% {
-		transform: rotate(0deg);
-	}
-
-	100% {
-		transform: rotate(360deg);
-	}
-}
 @keyframes plus {
 	0% {
 		transform: rotate(0deg);
@@ -89,17 +80,14 @@
 	animation-timeline: scroll(root block);
 	background: radial-gradient(circle, rgb(43, 43, 43) 0%, rgb(2, 0, 16) 100%);
 	.touchscreen {
-		position: absolute;
-		bottom: 20px;
-		left: 20px;
-		width: 40px;
 		&:after {
-			content:'touch screen';
+			content: "touch screen";
 			font-size: 8px;
 			transform-origin: center;
 			rotate: 90deg;
 		}
 	}
+
 	&_inner {
 		max-width: 1366px;
 		align-self: center;

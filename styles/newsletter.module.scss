@@ -1,5 +1,8 @@
 .newsletter {
     max-height: 120px;
+    background: linear-gradient(180deg, #d540ff 0%, #442ed0 100%);
+    overflow: hidden;
+    filter: drop-shadow(2px 4px 10px black);
 
     &_inner {
         position: relative;
@@ -9,9 +12,6 @@
     svg {
         fill: var(--fill);
     }
-    
-    background: linear-gradient(180deg, #6640ff 0%, #1703ff 100%);
-    overflow: hidden;
 
     .contact_hypno {
         position: absolute;
