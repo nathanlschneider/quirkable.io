@@ -17,7 +17,7 @@ const Asteroid = (props) => {
 	const randomCoords = () => {
 		const obj = {};
 
-		if (window) {
+		if (typeof window !== 'undefined') {
 			obj.x = Math.floor(Math.random() * window.innerWidth);
 			obj.y = Math.floor(Math.random() * window.innerHeight);
 		}

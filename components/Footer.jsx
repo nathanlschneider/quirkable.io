@@ -1,12 +1,12 @@
 import styles from "@styles/footer.module.scss";
-import Logo from "./NavBar/Logo";
+import LinkedLogo from "./NavBar/LinkedLogo";
 import Link from "next/link";
 const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.footer_content_wrapper}>
         <div style={{display: "grid", gridTemplateRows: "75px 25px"}}>
-          <Logo fill={"#000"} />
+          <LinkedLogo fill={'#000'} color={'#000'}/>
           <p>Built with Next.js</p>
           <p style={{fontSize: "12px"}}>© 2023 Quirkable. All Rights Reserved.</p>
         </div>

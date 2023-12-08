@@ -28,13 +28,14 @@
 	--nav-position: fixed;
 	--top: 0px;
 	--main-pad: 0px 75px;
-	--section-pad: 95px;
+	--section-pad: 95px 0px;
 	--border-radius: 25px;
 	--nav-height: 95px;
 	--transition: 0.3s;
 	--opacity: 0.4;
 	--mix-mode: none;
 	--hero-zindex: 9;
+	--visibility: 'visible';
 }
 
 :focus-visible {
@@ -93,5 +94,19 @@ h5 {
 	font-weight: 700;
 	letter-spacing: 1.5px;
 	text-transform: uppercase;
+}
+
+@keyframes exit {
+	0%{
+		transform: translateX(0px);
+	}
+
+	10% {
+		transform: translateX(-500px);
+	}
+
+	100% {
+		transform: translateX(-500px);
+	}
 }
 
