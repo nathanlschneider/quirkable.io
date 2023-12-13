@@ -9,8 +9,8 @@ const Scroller = () => {
 				bottom: "30px",
 				right: "70px",
 				zIndex: "9999",
-				animation: "pushexit linear",
-				animationTimeline: "scroll()",
+				// animation: "pushexit linear",
+				// animationTimeline: "scroll()",
 			}}>
 			<CircleScroll />
 			<Arrow />

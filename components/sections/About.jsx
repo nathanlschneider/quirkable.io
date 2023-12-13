@@ -10,7 +10,7 @@ const About = (props) => {
 			{/* <Curve/> */}
 
 			<section className={styles.about_inner}>
-				<h2 className={styles.h2}>Stuff You Need To Know.</h2>
+				<h2 className={styles.h2}>We Can Help You Navigate Through It</h2>
 				<article className={styles.quote}>
 					<div className={styles.quote_title}>quir·ka·ble</div>
 					<div className={styles.quote_pronun} id='pronunciation'>

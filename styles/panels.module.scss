@@ -17,6 +17,7 @@
 	&2 {
 		position: absolute;
 		left: -14%;
+		z-index: 9;
 	}
 	&3 {
 		position: absolute;
@@ -49,34 +50,50 @@
 			}
 		}
 		.cards {
-			top: -330px;
 			position: relative;
 			display: flex;
 			flex-wrap: wrap;
-			max-width: 87%;
+			flex-direction: column;
+			text-align: right;
+			top: -317px;
 			.card {
-				width: 30%;
+				div {
+					display: none;
+				}
 				color: #fff;
-				padding: 2% 4% 3% 3.5%;
 				line-height: 34px;
-				background:linear-gradient(346deg, rgba(111, 110, 110, 0) 0%, rgb(0 0 0 / 70%) 80%);
-				border-top-right-radius: 60px;
-				border-bottom-left-radius: 60px;
-			
-				margin: 20px;
+				padding-bottom: 20px;
+				margin-bottom: 20px;
+				border-bottom: 1px solid;
+				transition: 0.2s;
+				transition-delay: 0.2s;
+				transition-timing-function: linear;
+				max-width: 30%;
+				cursor: pointer;
+
+				.active {
+					max-width: 35%;
+					border-color: var(--hot-pink);
+
+					h2 {
+						color: var(--hot-pink);
+					}
+				}
 
 				h2 {
 					color: inherit;
-					font-size: 1.2rem;
+					font-size: 2rem;
 					text-transform: uppercase;
 					font-weight: 800;
-					margin-bottom: 30px;
+					// margin-bottom: 30px;
 					position: relative;
 					display: inline-block;
+					transition: 0.2s;
+					transition-delay: 0.2s;
+					transition-timing-function: ease-in-out;
 					&:after {
 						position: absolute;
-
-						content: "";
+						// content: "";
 						width: 100%;
 						height: 16px;
 						bottom: -16px;

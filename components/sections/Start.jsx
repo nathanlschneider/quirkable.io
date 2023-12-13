@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import styles from "@styles/start.module.scss";
-import TouchIcon from "@components/TouchIcon";
 import Scroller from "@components/Scroller";
 
 const Asteroid = dynamic(() => import("@components/Asteroid"), { ssr: false });
@@ -25,9 +24,9 @@ const Start = (props) => {
 	const [asteroidField, setAsteroidField] = useState(initField);
 
 	const handleClick = (e) => {
-		console.log(asteroidId);
+		console.log(e)
 		setAsteroidId(asteroidId + 1);
-		setAsteroidField([...asteroidField, <Asteroid key={asteroidId} id={asteroidId} x={e.clientX} y={e.clientY} />]);
+		setAsteroidField([...asteroidField, <Asteroid key={asteroidId} id={asteroidId} x={e.pageX} y={e.pageY} />]);
 	};
 
 	const handleScroll = (e) => {
@@ -41,6 +40,7 @@ const Start = (props) => {
 					<div className={styles.plus_wrapper}>
 						<Image className={styles.plus} src='/images/plus.png' width={950} height={1050} alt='' />
 					</div>
+					<Image className={styles.rocket} src="/images/rocket.png" width={400} height={400} alt="Space Rocket" />
 					<div className={styles.plus_wrapper_b}>
 						<Image
 							className={styles.plus_b}
@@ -53,11 +53,10 @@ const Start = (props) => {
 
 					{asteroidField}
 					<h1 style={{ userSelect: "none" }} className={styles.xxl_h1}>
-						Make The Web Work For You
+						The Web Can Be A Strange Place...
 					</h1>
 				</section>
 			</section>
-			<TouchIcon />
 			<Scroller onClick={handleScroll} />
 		</>
 	);

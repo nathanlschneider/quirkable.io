@@ -56,6 +56,15 @@
 	}
 }
 
+@keyframes rocket {
+	0% {
+		transform: translateY(0px) translateX(0) rotate(-45deg) scale(.4);
+	}
+	20%, 100% {
+		transform: translateY(-150vh) translateX(5vw) rotate(-45deg) scale(1);
+	}
+}
+
 .xxl {
 	&_h1 {
 		color: #fff;
@@ -66,30 +75,34 @@
 		text-transform: uppercase;
 		text-align: center;
 		position: relative;
-		z-index: var(--hero-zindex);
+		z-index: 150;
 		animation: rise linear;
 		animation-timeline: scroll(root block);
 		justify-self: center;
 		align-self: center;
+		margin: 0 4%;
 	}
 }
 .start {
+	cursor: cell;
+	position: sticky;
+	top: 0;
 	z-index: 1;
 	display: grid;
 	animation: fader linear;
 	animation-timeline: scroll(root block);
 	background: radial-gradient(circle, rgb(43, 43, 43) 0%, rgb(2, 0, 16) 100%);
-	.touchscreen {
-		&:after {
-			content: "touch screen";
-			font-size: 8px;
-			transform-origin: center;
-			rotate: 90deg;
-		}
+	.rocket {
+		bottom: -400px;
+		left: 20vw;
+		position: absolute;
+		animation: rocket 14s infinite forwards linear;
+		z-index: 120;
+		
 	}
 
 	&_inner {
-		max-width: 1366px;
+		// max-width: 1366px;
 		align-self: center;
 		justify-self: center;
 		display: grid;
@@ -103,14 +116,14 @@
 				);
 				animation: move 300s infinite alternate ease-in-out;
 				position: absolute;
-				z-index: 4;
+				z-index: 101;
 				top: 300px;
 				right: 0;
 				&_b {
 					animation: 400s linear 1s infinite forwards pluswrapper;
 					transform-origin: 1px;
 					position: absolute;
-					z-index: 2;
+					z-index: 50;
 					top: 0;
 					left: 0;
 					opacity: 0.7;
@@ -120,6 +133,7 @@
 		}
 
 		.cube {
+			transition: .5s ease-in-out;
 			transform-origin: center;
 			filter: drop-shadow(0px 0px 20px #00000055);
 			animation: 40s linear 1s infinite forwards spin;
