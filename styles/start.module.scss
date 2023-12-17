@@ -74,79 +74,22 @@
 		transform: translateY(110vh) translateX(-20vw) rotate(-220deg) scale(1);
 	}
 }
-@keyframes showword {
-	0% {
-		opacity: 0;
-		transform: translateY(-25px);
-	}
-	100% {
-		opacity: 1;
-		transform: translateY(0);
-	}
-}
 
-.xxl {
-	&_h1 {
-		color: #fff;
-		font-size: clamp(82px, 14vw, 228px);
-		line-height: clamp(82px, 14vw, 228px);
-		font-weight: 700;
-		filter: drop-shadow(0px 0px 20px #00000055);
-		text-transform: uppercase;
-		text-align: center;
-		position: relative;
-		z-index: 150;
-		animation: rise linear;
-		animation-timeline: scroll(root block);
-		justify-self: center;
-		align-self: center;
-		margin: 0 4%;
-		
-	}
-}
 .start {
 	cursor: cell;
 	position: sticky;
 	top: 0;
 	z-index: 1;
-	display: grid;
 	animation: fader linear;
 	animation-timeline: scroll(root block);
 	background: radial-gradient(circle, rgb(43, 43, 43) 0%, rgb(2, 0, 16) 100%);
-	.test {
-		display: inline-block !important;
-		opacity: 0;
-		transform: translateY(-25px);
-		animation-timing-function: ease-in-out;
-		&:nth-of-type(1) {
-			animation: showword .5s forwards;
-			animation-delay: 200ms;
-		}
-		&:nth-of-type(2) {
-			animation: showword .5s forwards;
-			animation-delay: 400ms;
-		}
-		&:nth-of-type(3) {
-			animation: showword .5s forwards;
-			animation-delay: 600ms;
-		}
-		&:nth-of-type(4) {
-			animation: showword .5s forwards;
-			animation-delay: 800ms;
-		}
-		&:nth-of-type(5) {
-			animation: showword .5s forwards;
-			animation-delay: 1000ms;
-		}
-		&:nth-of-type(6) {
-			animation: showword .5s forwards;
-			animation-delay: 1200ms;
-		}
-		&:nth-of-type(7) {
-			animation: showword .5s forwards;
-			animation-delay: 1400ms;
-		}
+
+	.center_logo {
+		max-width: 300px;
+		fill: grey;
+		opacity: .03;
 	}
+
 	.rocket {
 		bottom: -400px;
 		left: 20vw;
@@ -168,10 +111,9 @@
 
 	&_inner {
 		// max-width: 1366px;
-		align-self: center;
-		justify-self: center;
-		display: grid;
-
+		display: flex;
+		justify-content: center;
+		align-items: center;
 		.plus {
 			animation: 240s linear 1s infinite forwards plus;
 			transform-origin: center;

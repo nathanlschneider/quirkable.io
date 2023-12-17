@@ -1,16 +1,8 @@
 @import "mixins/mixins.scss";
-@keyframes rotate {
-	0% {
-		rotate: 0deg;
-	}
-	100% {
-		rotate: 90deg;
-	}
-}
+
 .cube {
 	position: absolute;
-	animation: rotate linear;
-	animation-timeline: scroll();
+	
 	right: -158px;
 	z-index: -1;
 	bottom: 53px;
@@ -88,9 +80,6 @@
 					// margin-bottom: 30px;
 					position: relative;
 					display: inline-block;
-					transition: 0.2s;
-					transition-delay: 0.2s;
-					transition-timing-function: ease-in-out;
 					&:after {
 						position: absolute;
 						// content: "";

@@ -2,15 +2,15 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "@styles/start.module.scss";
+import { motion } from "framer-motion";
 
 const Asteroid = (props) => {
-	const { id, x, y, width, height } = props;
+	const { id, x, y, width, height, delay = 0 } = props;
 	const [duration] = useState(Math.floor(Math.random() * (500 - 10) + 10));
-	const [style, setStyle] = useState({ opacity: "0", scale: "0" });
-
-	useEffect(() => {
-		setStyle({ opacity: "1", scale: "1" });
-	}, []);
+	const container = {
+		hidden: { opacity: 0, scale: 0 },
+		show: { opacity: 1, scale: 1, transition: {type: "spring", stiffness: 400 } },
+	};
 
 	const randomCoords = () => {
 		const obj = {};
@@ -30,22 +30,24 @@ const Asteroid = (props) => {
 		<div
 			className={styles.cube_wrapper}
 			style={{
-				transformOrigin: 'center',
+				transformOrigin: "center",
 				left: `${x ? x - 260 : randomCoords().x}px`,
-				top: `${y ? y - 100: randomCoords().y}px`,
+				top: `${y ? y - 100 : randomCoords().y}px`,
 				zIndex: `${pairSize}`,
 				filter: `blur(${pairSize < 100 ? 3 : 0}px)`,
 				animationDuration: `${duration}s`,
 			}}>
-			<Image
-				id={`particle${id}`}
-				style={style}
-				className={styles.cube}
-				src='/images/cube.png'
-				width={width ? width : pairSize}
-				height={height ? height : pairSize}
-				alt=''
-			/>
+			<motion.div className='asteroidWrapper' variants={container} initial='hidden' animate='show'>
+				<Image
+					id={`particle${id}`}
+					className={styles.cube}
+					src='/images/cube.png'
+					width={width ? width : pairSize}
+					height={height ? height : pairSize}
+					alt=''
+					priority={true}
+				/>
+			</motion.div>
 		</div>
 	);
 };

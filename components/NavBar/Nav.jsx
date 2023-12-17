@@ -2,7 +2,6 @@ import Burger from "@components/NavBar/Burger";
 import styles from "@styles/nav.module.scss";
 import UserLogin from "./UserLogin";
 import NavLinks from "@components/NavBar/NavLinks";
-import ScrollWatcher from "./ScrollWatcher";
 import LinkedLogo from "@components/NavBar/LinkedLogo";
 
 const Nav = (props) => {
@@ -15,7 +14,6 @@ const Nav = (props) => {
 				<NavLinks />
 				<UserLogin />
 			</div>
-			<ScrollWatcher />
 		</nav>
 	);
 };

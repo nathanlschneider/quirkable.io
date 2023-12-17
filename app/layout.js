@@ -2,7 +2,6 @@ import "./globals.scss";
 import Footer from "@components/Footer";
 import Nav from "@components/NavBar/Nav";
 import { inter } from "../app/fonts";
-import Newsletter from "@components/sections/Newsletter";
 
 
 export const metadata = {
@@ -19,7 +18,6 @@ export default function RootLayout({ children }) {
         </header>
         <>{children}</>
         <Footer />
-        {/* <Newsletter /> */}
       </body>
     </html>
   );

@@ -1,44 +1,27 @@
-.tribe-events-view--list {
-    .tribe-common-l-container.tribe-events-l-container{
-        .tribe-events-calendar-list {
+kaPtI2hK!c#U
 
-            .tribe-events-calendar-list__event-row {
-                display: none;
-            }
++===================================+
+| New Account Info                  |
++===================================+
+| Domain: newrevue.runengine.com
+| Ip: 209.59.137.138 (n)
+| HasCgi: y
+| UserName: newrevue
+| PassWord: kaPtI2hK!c#U
+| CpanelMod: jupiter
+| HomeRoot: /home
+| Quota: unlimited
+| NameServer1: ns1.template.liquidweb.com
+| NameServer2: ns2.template.liquidweb.com
+| NameServer3: 
+| NameServer4: 
+| Contact Email: nathan@runengine.com
+| Package: default
+| Feature List: default
+| Account Enhancements: None
+| Language: en
++===================================+
+C}ECRODA!)rW
 
-        }
-    }
-}
+admin/7cU9#U66aJh@
 
-
-
-
-
-
-
-<style>
-.tribe-events-calendar-list__event-row {
-        height: 25px;
-        overflow: hidden;
-        transition: 1s all;
-        cursor: pointer;
-        background-color: #efefef;
-        margin: 0px !important;
-}
-
-.hider {
-    height: unset !important;
-    overflow: visible !important;
-}
-
-</style>
-<script>
-console.log('loaded')
-window.addEventListener('DOMContentLoaded', ()=>{
-    const rows = document.querySelectorAll('.tribe-events-calendar-list__event-row');
-    rows.forEach(row=>row.onclick=(d)=>row.classList.toggle('hider'))             
-});
-</script>
-<?php
-
-?>

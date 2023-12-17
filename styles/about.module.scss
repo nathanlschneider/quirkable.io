@@ -23,47 +23,6 @@
 	fill: #ffffff;
 }
 
-@keyframes translate {
-	0% {
-		transform: translateY(0px);
-	}
-	100% {
-		transform: translateY(-1000px);
-	}
-}
-
-@keyframes kilter {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(-20deg);
-	}
-}
-
-@keyframes slidein {
-	0% {
-		transform: translateX(-60vw);
-	}
-	30% {
-		transform: translateX(0px);
-	}
-	100% {
-		transform: translateX(0px);
-	}
-}
-
-@keyframes pushin {
-	0% {
-		transform: translateX(60vw);
-	}
-	30% {
-		transform: translateX(0px);
-	}
-	100% {
-		transform: translateX(0px);
-	}
-}
 
 .quirk {
 	fill: #000;
