@@ -16,23 +16,22 @@ const Hero = () => {
 		show: {
 			opacity: 1,
 			transition: {
-				delayChildren: 0.5,
 				staggerChildren: 0.2,
 			},
 		},
 	};
 
 	const item = {
-		hidden: { opacity: 0, y: -20 },
+		hidden: { opacity: 0, y: -80 },
 		show: {
 			opacity: [0, 1, 1, 1, 0],
-			y: [-20, 0, 0, 0, 20],
+			y: [-80, 0, 0, 0, 80],
 			transition: {
-				duration: 5,
+				duration: 4,
 				ease: "linear",
 				times: [0, 0.1, 0.5, 0.9, 1],
 				repeat: Infinity,
-				repeatDelay: 4,
+				repeatDelay: 2,
 			},
 		},
 	};
@@ -41,16 +40,18 @@ const Hero = () => {
 		["The", "Web", "Is", "A", "Strange", "Place..."],
 		["We", "Can", "Help", "You", "Navigate", "It."],
 		["With", "Our", "Out", "Of", "Space", "Wares!"],
-		["You", "will", "make", "heaps", "of", "Cheese"]
+		["You", "will", "make", "heaps", "of", "Cheese"],
+		["Scroll", "Down", "To", "Find", "Out", "More"]
 	);
 
+
 	useEffect(() => {
+		console.log("mounted");
 		let counter = 0;
-		wordRef_0.current.innerHTML = `Hi. :)`;
+		wordRef_0.current.innerHTML = `Hi :)`;
 
 		setInterval(() => {
-			console.log(counter);
-
+			console.log("interval");
 			wordRef_0.current.innerHTML = `${heroPhrases[counter][0]}&nbsp;`;
 			wordRef_1.current.innerHTML = `${heroPhrases[counter][1]}&nbsp;`;
 			wordRef_2.current.innerHTML = `${heroPhrases[counter][2]}&nbsp;`;
@@ -59,10 +60,10 @@ const Hero = () => {
 			wordRef_5.current.innerHTML = `${heroPhrases[counter][5]}`;
 
 			counter++;
-			if (counter === 4) {
+			if (counter === heroPhrases.length) {
 				counter = 0;
 			}
-		}, 9000);
+		}, 6000);
 	}, []);
 
 	return (
