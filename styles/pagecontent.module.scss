@@ -1,0 +1,43 @@
+.h1 {
+	z-index: 999;
+	position: absolute;
+	text-align: center;
+	width: 100vw;
+	top: 77px;
+	font-size: 9rem;
+	font-weight: 700;
+	filter: drop-shadow(0px 0px 20px black);
+}
+
+.pagecontent {
+	z-index: 9;
+	background-color: #ffffff;
+	border-top-right-radius: 60px;
+	border-top-left-radius: 60px;
+	margin: 0 auto;
+	max-width: var(--max-page-width);
+	padding: 4%;
+	@media (max-width: calc(1366px + 80px)) {
+		margin: 0 40px;
+	}
+}
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .platform_group {
+        display: flex;
+    }
+}
+
+.btn {
+    letter-spacing: 1px;
+    background-color: rgb(56, 15, 203);
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    padding: 20px 40px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+}

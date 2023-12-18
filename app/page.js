@@ -7,7 +7,7 @@ import Panels from "@components/sections/Panels";
 export default function App() {
 	return (
 		<>
-			<Start />
+			<Start showHero={true} />
 			<About />
 			<Panels/>
 			<Newsletter/>

@@ -1,10 +1,14 @@
-import style from '@styles/page.module.scss';
+import Start from "@components/sections/Start";
+import About from "@components/sections/About";
+import Newsletter from "@components/sections/Newsletter";
+import Panels from "@components/sections/Panels";
 
-const page = () => {
-  return (
-    <section className={style.page}>    
-    </section>
-  )
+export default function App() {
+	return (
+		<>
+			<Start />
+			<PageConten/>
+			<Newsletter/>
+		</>
+	);
 }
-
-export default page

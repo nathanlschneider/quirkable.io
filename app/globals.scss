@@ -55,8 +55,11 @@ html {
 	}
 }
 
-body {
+Image {
+	width: auto;
+	height: auto;
 }
+
 header {
 	position: relative;
 	display: flex;
