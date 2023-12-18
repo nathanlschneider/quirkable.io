@@ -84,12 +84,6 @@
 	animation-timeline: scroll(root block);
 	background: radial-gradient(circle, rgb(43, 43, 43) 0%, rgb(2, 0, 16) 100%);
 
-	.center_logo {
-		max-width: 300px;
-		fill: grey;
-		opacity: .03;
-	}
-
 	.rocket {
 		bottom: -400px;
 		left: 20vw;
@@ -109,35 +103,51 @@
 		}
 	}
 
+	.icons {
+		transition: 0.5s ease-in-out;
+		transform-origin: center;
+		filter: drop-shadow(0px 0px 20px #00000055);
+		animation: linear 1s forwards across;
+		opacity: 0.95;
+		position: absolute;
+		transform-origin: center;
+		offset-path: path(
+			"M 264.981 85.964 C 258.351 85.964 250.459 92.327 244.345 94.7 C 218.965 104.548 190.15 124.891 208.701 153.98 C 221.264 173.681 235.255 194.83 251.849 211.389 C 276.32 235.808 311.485 257.058 325.638 290.014 C 330.403 301.107 324.054 312.101 316.884 320.278 C 301.013 338.377 277.693 351.05 253.099 349.606 C 218.959 347.602 198.967 299.254 202.447 269.733 C 203.383 261.793 203.924 252.922 206.824 245.397 C 210.546 235.742 217.747 227.517 223.709 219.189 C 243.706 191.252 272.009 168.7 289.369 139.004 C 291.842 134.774 293.497 129.702 294.684 124.964 C 301.034 99.621 275.187 86.588 254.975 86.588"
+		);
+		animation: move 30s infinite alternate ease-in-out;
+	}
+
+	.plus {
+		animation: 240s linear 1s infinite forwards plus;
+		transform-origin: center;
+		&_wrapper {
+			// offset-path: path(
+			// 	"M 264.981 85.964 C 258.351 85.964 250.459 92.327 244.345 94.7 C 218.965 104.548 190.15 124.891 208.701 153.98 C 221.264 173.681 235.255 194.83 251.849 211.389 C 276.32 235.808 311.485 257.058 325.638 290.014 C 330.403 301.107 324.054 312.101 316.884 320.278 C 301.013 338.377 277.693 351.05 253.099 349.606 C 218.959 347.602 198.967 299.254 202.447 269.733 C 203.383 261.793 203.924 252.922 206.824 245.397 C 210.546 235.742 217.747 227.517 223.709 219.189 C 243.706 191.252 272.009 168.7 289.369 139.004 C 291.842 134.774 293.497 129.702 294.684 124.964 C 301.034 99.621 275.187 86.588 254.975 86.588"
+			// );
+			// animation: move 300s infinite alternate ease-in-out;
+			position: absolute;
+			z-index: 101;
+			top: calc(50vh - (1050px / 2));
+			right: 0;
+			width: 50vw;
+			&_b {
+				animation: 400s linear 1s infinite forwards pluswrapper;
+				transform-origin: 1px;
+				position: absolute;
+				z-index: 50;
+				top: 0;
+				left: 1vw;
+				opacity: 0.7;
+				filter: blur(3px);
+			}
+		}
+	}
+
 	&_inner {
 		// max-width: 1366px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		.plus {
-			animation: 240s linear 1s infinite forwards plus;
-			transform-origin: center;
-			&_wrapper {
-				offset-path: path(
-					"M 264.981 85.964 C 258.351 85.964 250.459 92.327 244.345 94.7 C 218.965 104.548 190.15 124.891 208.701 153.98 C 221.264 173.681 235.255 194.83 251.849 211.389 C 276.32 235.808 311.485 257.058 325.638 290.014 C 330.403 301.107 324.054 312.101 316.884 320.278 C 301.013 338.377 277.693 351.05 253.099 349.606 C 218.959 347.602 198.967 299.254 202.447 269.733 C 203.383 261.793 203.924 252.922 206.824 245.397 C 210.546 235.742 217.747 227.517 223.709 219.189 C 243.706 191.252 272.009 168.7 289.369 139.004 C 291.842 134.774 293.497 129.702 294.684 124.964 C 301.034 99.621 275.187 86.588 254.975 86.588"
-				);
-				animation: move 300s infinite alternate ease-in-out;
-				position: absolute;
-				z-index: 101;
-				top: 300px;
-				right: 0;
-				&_b {
-					animation: 400s linear 1s infinite forwards pluswrapper;
-					transform-origin: 1px;
-					position: absolute;
-					z-index: 50;
-					top: 0;
-					left: 0;
-					opacity: 0.7;
-					filter: blur(3px);
-				}
-			}
-		}
 
 		.cube {
 			transition: 0.5s ease-in-out;

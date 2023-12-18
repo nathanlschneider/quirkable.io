@@ -44,7 +44,6 @@ const Hero = () => {
 		["Scroll", "Down", "To", "Find", "Out", "More"]
 	);
 
-
 	useEffect(() => {
 		console.log("mounted");
 		let counter = 0;
@@ -67,8 +66,8 @@ const Hero = () => {
 	}, []);
 
 	return (
-		<motion.h1 variants={container} initial='hidden' animate='show' exit='exit' className={styles.xxl_h1}>
-			<motion.div ref={wordRef_0} key='0' variants={item} />
+		<motion.h1 layout variants={container} initial='hidden' animate='show' exit='exit' className={styles.xxl_h1}>
+			<motion.div layout ref={wordRef_0} key='0' variants={item} />
 			<motion.div ref={wordRef_1} key='1' variants={item} />
 			<motion.div ref={wordRef_2} key='2' variants={item} />
 			<motion.div ref={wordRef_3} key='3' variants={item} />

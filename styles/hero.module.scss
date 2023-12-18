@@ -8,11 +8,12 @@
 		text-transform: uppercase;
 		text-align: center;
 		position: absolute;
-		z-index: 120;
+		z-index: 999;
 		justify-self: center;
 		align-self: center;
 		div {
 			display: inline-block;
 		}
+		user-select: none;
 	}
 }

@@ -5,12 +5,19 @@ import styles from "@styles/start.module.scss";
 import { motion } from "framer-motion";
 
 const Asteroid = (props) => {
-	const { id, x, y, width, height, delay = 0 } = props;
+	const { id, x, y, width, height, src, alt } = props;
 	const [duration] = useState(Math.floor(Math.random() * (500 - 10) + 10));
+	const [destoryObject, setDestroyObject] = useState(true);
+	
 	const container = {
 		hidden: { opacity: 0, scale: 0 },
-		show: { opacity: 1, scale: 1, transition: {type: "spring", stiffness: 400 } },
+		show: { opacity: 1, scale: 1, transition: { type: "spring", stiffness: 400 } },
+		destroy: {scale: 0, transition: { type: "spring", stiffness: 400 }}
 	};
+
+	const handleDestoryObject = () => {
+		setDestroyObject(false);
+	}
 
 	const randomCoords = () => {
 		const obj = {};
@@ -27,24 +34,24 @@ const Asteroid = (props) => {
 	const pairSize = randomSize();
 
 	return (
-		<div
+		destoryObject && <div
 			className={styles.cube_wrapper}
 			style={{
 				transformOrigin: "center",
 				left: `${x ? x - 260 : randomCoords().x}px`,
 				top: `${y ? y - 100 : randomCoords().y}px`,
 				zIndex: `${pairSize}`,
-				filter: `blur(${pairSize < 100 ? 3 : 0}px)`,
+				filter: src ? '0px' : `blur(${pairSize < 100 ? 3 : 0}px)`,
 				animationDuration: `${duration}s`,
 			}}>
-			<motion.div className='asteroidWrapper' variants={container} initial='hidden' animate='show'>
+			<motion.div className={styles.asteroidWrapper} onClick={handleDestoryObject} variants={container} initial='hidden' animate='show' exit='destroy'>
 				<Image
 					id={`particle${id}`}
 					className={styles.cube}
-					src='/images/cube.png'
-					width={width ? width : pairSize}
-					height={height ? height : pairSize}
-					alt=''
+					src={src ? src : '/images/cube.png'}
+					width={src ? 200 : width ? width : pairSize}
+					height={src ? 200 : height ? height : pairSize}
+					alt={alt ? alt : 'Asteroid'}
 					priority={true}
 				/>
 			</motion.div>
