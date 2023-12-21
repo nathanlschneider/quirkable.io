@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.footer_content_wrapper}>
         <div style={{display: "grid", gridTemplateRows: "75px 25px"}}>
-          <LinkedLogo fill={'#000'} color={'#000'}/>
+          <LinkedLogo fill={'#fff'} color={'#fff'}/>
           <p>Built with Next.js</p>
           <p style={{fontSize: "12px"}}>© 2023 Quirkable. All Rights Reserved.</p>
         </div>

@@ -2,26 +2,32 @@
 
 .cube {
 	position: absolute;
-	
 	right: -158px;
 	z-index: -1;
 	bottom: 53px;
+	filter: saturate(1.2);
+	
 	&2 {
 		position: absolute;
 		left: -14%;
 		z-index: 9;
+		filter: saturate(1.2);
+
 	}
 	&3 {
 		position: absolute;
 		top: 0;
 		right: 36%;
+		filter: saturate(1.2);
+
 	}
 }
 .panels {
-	background: radial-gradient(circle, rgb(43, 43, 43) 0%, rgb(2, 0, 16) 100%);
-	overflow: hidden;
+	// background: radial-gradient(circle, rgb(43, 43, 43) 0%, rgba(2, 0, 16, 0) 100%);
+	// overflow: hidden;
 	@include section_guts;
 	z-index: 1;
+	padding-top: 10%;
 
 	aside.aside {
 		margin: 0 20px;

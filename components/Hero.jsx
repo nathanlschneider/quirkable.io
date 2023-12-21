@@ -45,7 +45,6 @@ const Hero = () => {
 	);
 
 	useEffect(() => {
-		console.log("mounted");
 		let counter = 0;
 		wordRef_0.current.innerHTML = `Hi :)`;
 

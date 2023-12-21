@@ -1,8 +1,10 @@
 .footer {
   // background: linear-gradient(180deg, #6640ff 0%, #1703ff 100%);
-  background-color: #fff;
+  background-color: #0d052e;
   padding: 20px;
   margin: 0 auto;
+  position: relative;
+  z-index: 9;
   section {
     max-width: 1366px;
     margin: 0 auto;
@@ -24,19 +26,20 @@
     flex-direction: column;
   }
   .menu_header {
-    color: #1e1e1e;
-    font-size: 14px;
+    color: #097cff;
+    font-size: 1.1rem;
     font-weight: 700;
     letter-spacing: 0.6px;
     text-transform: uppercase;
+    margin-bottom: 10px;
   }
   a {
     display: flex;
     margin-bottom: 0px;
     padding-top: 5px;
     padding-bottom: 5px;
-    color: #1e1e1e;
-    font-size: 1rem;
+    color: #ffffff;
+    font-size: 1.3rem;
     text-decoration: none;
     cursor: pointer;
     &:hover {

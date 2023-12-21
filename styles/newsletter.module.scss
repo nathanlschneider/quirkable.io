@@ -1,10 +1,9 @@
 .newsletter {
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
     max-height: 120px;
     background: linear-gradient(180deg, #d540ff 0%, #442ed0 100%);
     overflow: hidden;
     // filter: drop-shadow(2px 4px 10px black);
+    box-shadow: 4px 0px 153px #d540ff;
 
     &_inner {
         position: relative;
@@ -25,7 +24,6 @@
         max-width: 1366px;
         margin: 0 auto;
         height: 120px;
-        border-radius: 50px;
         display: flex;
         flex-direction: row;
         align-items: center;
