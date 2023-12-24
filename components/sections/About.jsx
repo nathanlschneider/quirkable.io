@@ -30,7 +30,12 @@ const About = (props) => {
 		<section className={styles.about}>
 			<section className={styles.about_inner}>
 				<Motion_h2 content='This is what you need to know.' styles={styles} />
-				<motion.article variants={container} initial='hidden' whileInView='show' viewport={{once: true}} className={styles.quote}>
+				<motion.article
+					variants={container}
+					initial='hidden'
+					whileInView='show'
+					viewport={{ once: true }}
+					className={styles.quote}>
 					<motion.div variants={item} key='0' className={styles.quote_title}>
 						quir·ka·ble
 					</motion.div>
@@ -55,7 +60,13 @@ const About = (props) => {
 						</li>
 					</motion.ol>
 				</motion.article>
-				<motion.div  transition={{duration: 6}} initial={{y: 200, opacity: 0}} animate={{y: 0, opacity:1}} className={styles.nextjs_image_wrapper}>
+				
+
+				<motion.div
+					transition={{ duration: 6 }}
+					initial={{ y: 200, opacity: 0 }}
+					animate={{ y: 0, opacity: 1 }}
+					className={styles.nextjs_image_wrapper}>
 					<Image className={styles.cube} src='/images/wheel.webp' width={600} height={600} alt='' />
 				</motion.div>
 			</section>

@@ -8,21 +8,25 @@ import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 
 const Newsletter = (props) => {
 	const interRef = useRef();
-let inter = 1;
 
 	useEffect(() => {
-		setInterval(() => {
-			inter++;
-			if (inter === 360) {
-				inter = 1;
-			}
-			interRef.current.style.filter = `hue-rotate(${inter}deg)`;
-		}, 50);
+		let start = 290;
+		let end = 480;
+		let current = start, increment = 1;
+
+		function update() {
+			current += increment;
+			if (current === end || current === start) increment *= -1;
+			interRef.current.style.filter = `hue-rotate(${current}deg)`;
+			setTimeout(update, 100);
+		  }
+		
+		  update();
 	}, []);
 
 	return (
 		<>
-			<motion.section ref={interRef} className={styles.newsletter}>
+			<motion.section ref={interRef} initial={{opacity: 0, scale:0}} animate={{opacity: 1, scale: 1}} transition={{duration: 1, type: 'spring'}} className={styles.newsletter}>
 				<section className={`${styles.newsletter_inner} ${nunito.className}`}>
 					<h2 className={`${lexend_deca.className}`}>Stay in the loop</h2>
 					<p>

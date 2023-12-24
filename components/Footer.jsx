@@ -1,6 +1,7 @@
 import styles from "@styles/footer.module.scss";
 import LinkedLogo from "./NavBar/LinkedLogo";
 import Link from "next/link";
+import Image from "next/image";
 const Footer = () => {
   return (
     <footer className={styles.footer}>

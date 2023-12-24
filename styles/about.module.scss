@@ -6,8 +6,8 @@
 }
 div.nextjs_image_wrapper {
 	position: absolute !important;
-	left: -311px;
-	bottom: -178px;
+	left: -20dvw;
+	align-self: center;
 	grid-column: unset !important;
 	img {
 		filter: saturate(1.2) drop-shadow(0px 0px 39px #00000055);
@@ -17,17 +17,18 @@ div.nextjs_image_wrapper {
 .about {
 	@include section_guts;
 	position: relative;
-	// background-color: var(--gray);
 	color: #fff;
-	//animation: translate linear;
-	//animation-timeline: scroll(root block);
+	height: 100dvh;
 	z-index: 9;
-	// overflow: hidden;
-	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
 	&_inner {
-		display: grid;
-		//grid-template-columns: repeat(8, 1fr);
-		//grid-template-rows: repeat(8, calc(1366px / 8));
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
 		color: inherit;
 		* {
 			color: inherit;

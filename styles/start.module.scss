@@ -76,6 +76,7 @@
 }
 
 .start {
+	height: 100dvh;
 	cursor: cell;
 	position: sticky;
 	top: 0;
@@ -83,7 +84,6 @@
 	animation: fader linear;
 	animation-timeline: scroll(root block);
 	background: radial-gradient(circle, rgb(43, 43, 43) 0%, rgb(2, 0, 16) 100%);
-
 	img {
 		filter: saturate(1.2);
 	}
@@ -137,8 +137,8 @@
 	&_inner {
 		// max-width: 1366px;
 		display: flex;
-		justify-content: center;
-		align-items: center;
+		width: 100dvw;
+		height: 100dvh;
 
 		.cube {
 			transition: 0.5s ease-in-out;

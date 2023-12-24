@@ -38,24 +38,34 @@ const Hero = () => {
 
 	const heroPhrases = Array(
 		["The", "Web", "Is", "A", "Strange", "Place..."],
-		["We", "Can", "Help", "You", "Navigate", "It."],
-		["With", "Our", "Out", "Of", "Space", "Wares!"],
-		["You", "will", "make", "heaps", "of", "Cheese"],
+		["We'll", "Navigate", "You", "to", "success!"],
+		["With", "Our", "Software", "Solutions."],
 		["Scroll", "Down", "To", "Find", "Out", "More"]
 	);
 
 	useEffect(() => {
 		let counter = 0;
-		wordRef_0.current.innerHTML = `Hi :)`;
+		wordRef_0.current.innerHTML = `Hi 🌈`;
 
 		setInterval(() => {
-			console.log("interval");
-			wordRef_0.current.innerHTML = `${heroPhrases[counter][0]}&nbsp;`;
-			wordRef_1.current.innerHTML = `${heroPhrases[counter][1]}&nbsp;`;
-			wordRef_2.current.innerHTML = `${heroPhrases[counter][2]}&nbsp;`;
-			wordRef_3.current.innerHTML = `${heroPhrases[counter][3]}&nbsp;`;
-			wordRef_4.current.innerHTML = `${heroPhrases[counter][4]}&nbsp;`;
-			wordRef_5.current.innerHTML = `${heroPhrases[counter][5]}`;
+			wordRef_0.current.innerHTML = `${
+				typeof heroPhrases[counter][0] !== "undefined" ? heroPhrases[counter][0] : ""
+			}`;
+			wordRef_1.current.innerHTML = `${
+				typeof heroPhrases[counter][1] !== "undefined" ? heroPhrases[counter][1] : ""
+			}`;
+			wordRef_2.current.innerHTML = `${
+				typeof heroPhrases[counter][2] !== "undefined" ? heroPhrases[counter][2] : ""
+			}`;
+			wordRef_3.current.innerHTML = `${
+				typeof heroPhrases[counter][3] !== "undefined" ? heroPhrases[counter][3] : ""
+			}`;
+			wordRef_4.current.innerHTML = `${
+				typeof heroPhrases[counter][4] !== "undefined" ? heroPhrases[counter][4] : ""
+			}`;
+			wordRef_5.current.innerHTML = `${
+				typeof heroPhrases[counter][5] !== "undefined" ? heroPhrases[counter][5] : ""
+			}`;
 
 			counter++;
 			if (counter === heroPhrases.length) {
@@ -65,8 +75,8 @@ const Hero = () => {
 	}, []);
 
 	return (
-		<motion.h1 layout variants={container} initial='hidden' animate='show' exit='exit' className={styles.xxl_h1}>
-			<motion.div layout ref={wordRef_0} key='0' variants={item} />
+		<motion.h1 variants={container} initial='hidden' animate='show' exit='exit' className={styles.xxl_h1}>
+			<motion.div ref={wordRef_0} key='0' variants={item} />
 			<motion.div ref={wordRef_1} key='1' variants={item} />
 			<motion.div ref={wordRef_2} key='2' variants={item} />
 			<motion.div ref={wordRef_3} key='3' variants={item} />

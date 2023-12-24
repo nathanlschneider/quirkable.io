@@ -9,3 +9,20 @@
 		margin: 0 auto;
 	}
 }
+
+@mixin test {
+	@media (prefers-reduced-motion: no-preference) {
+		scale: 0.6;
+		opacity: 0;
+		animation: test linear forwards;
+		animation-timeline: view();
+		transform-origin: left;
+		animation-range: 250px 500px;
+		@keyframes test {
+			to {
+				scale: 1;
+				opacity: 1;
+			}
+		}
+	}
+}

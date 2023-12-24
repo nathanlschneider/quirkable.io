@@ -1,8 +1,12 @@
 .xxl {
 	&_h1 {
+		// font-size: clamp(82px, 14vw, 228px);
+		// line-height: clamp(82px, 14vw, 228px);
+		// fallback
+		font-size: clamp(12cqi, 12lvw, 20cqmax);
+		line-height: clamp(12cqi, 12lvw, 20cqmax);
+
 		color: #fff;
-		font-size: clamp(82px, 14vw, 228px);
-		line-height: clamp(82px, 14vw, 228px);
 		font-weight: 700;
 		filter: drop-shadow(0px 0px 20px #00000055);
 		text-transform: uppercase;
@@ -13,6 +17,8 @@
 		align-self: center;
 		div {
 			display: inline-block;
+			text-align: center;
+			margin: 0px 15px;
 		}
 		user-select: none;
 	}
