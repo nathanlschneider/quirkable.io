@@ -1,53 +1,35 @@
 @import "mixins/mixins.scss";
 
-
 .cube {
-	display: none;
 	position: absolute;
 	right: -158px;
 	z-index: -1;
 	bottom: 53px;
 	filter: saturate(1.2);
-	
-		@include test;
+	@include test;
 
 	&2 {
-		display: none;
-
 		position: absolute;
 		left: -14%;
 		z-index: 9;
 		filter: saturate(1.2);
 		@include test;
-
 	}
 	&3 {
-		display: none;
-
 		position: absolute;
 		top: 0;
 		right: 36%;
 		filter: saturate(1.2);
 		@include test;
-
 	}
 }
 .panels {
-	// background: radial-gradient(circle, rgb(43, 43, 43) 0%, rgba(2, 0, 16, 0) 100%);
+	background: radial-gradient(circle, #4528f97d -20%, rgb(255 255 255 / 0%) 45%);
+	height: 100dvh;
 	// overflow: hidden;
 	@include section_guts;
 	z-index: 1;
 
-	aside.aside {
-		margin: 0 20px;
-		text-align: right;
-		max-width: 400px;
-		position: absolute;
-		right: 6px;
-		font-size: 2rem;
-		filter: drop-shadow(0px 0px 20px black);
-
-	}
 	&_inner {
 		max-width: var(--max-page-width);
 		width: 100dvw;
@@ -56,6 +38,49 @@
 			margin: 7rem 20px;
 			h2 {
 				text-align: right;
+			}
+		}
+
+		.panel_wrapper {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 40px;
+			.panel {
+				filter: drop-shadow(2px 4px 6px magenta);
+				&:hover {
+					color:#542eee;
+					background: #ffffffd1;
+					h3 {
+						color:#542eee;
+					}
+				}
+				cursor: pointer;
+				display: grid;
+				// border: 1px solid #fff;
+				background-color: #6949e9bd;
+				width: 48%;
+				// max-width: 530px;
+				padding: 35px;
+				overflow: hidden;
+				grid-template-columns: 0.25fr 1fr;
+				grid-template-rows: 30px 1fr;
+				border-radius: 16px;
+				height: 148px;
+				img {
+					grid-column: 1;
+					grid-row: 1 / span 2;
+					align-self: self-start;
+					justify-self: center;
+				}
+				h3 {
+					grid-column: 2;
+					font-size: 20px;
+				}
+				p {
+					grid-column: 2;
+					grid-row: 2;
+					font-size: 1rem;
+				}
 			}
 		}
 		// .cards {

@@ -26,7 +26,7 @@
 :root {
 	--max-page-width: 1366px;
 	--nav-position: fixed;
---top: 0px;
+	--top: 0px;
 	--main-pad: 0px 75px;
 	--section-pad: 95px 0px;
 	--border-radius: 25px;
@@ -36,7 +36,8 @@
 	--mix-mode: none;
 	--hero-zindex: 9;
 	--visibility: "visible";
-	--test-speed: .5s;
+	--test-speed: 0.5s;
+	--scroll-lock: none;
 }
 
 :focus-visible {
@@ -48,6 +49,9 @@ html {
 	overflow-x: hidden;
 }
 
+body {
+position: var(--scroll-lock);
+}
 
 header {
 	position: relative;
@@ -58,11 +62,11 @@ header {
 section {
 	position: relative;
 	color: #fff;
-	
+
 	& > .inner {
 		height: 100%;
 		max-width: 1366px;
-		color: inherit
+		color: inherit;
 	}
 }
 
@@ -120,15 +124,15 @@ h5 {
 
 .btn {
 	--height: 44px;
-    min-width: calc(var(--height) * 2);
-    height: var(--height);
-    border-radius: calc(var(--height) * 0.5);
-    padding: 0 30px;
-    margin: 0 10px;
-    text-transform: uppercase;
-    font-weight: 700;
-    background-color: rgb(175, 23, 244);
-    color: #fff;
+	min-width: calc(var(--height) * 2);
+	height: var(--height);
+	border-radius: calc(var(--height) * 0.5);
+	padding: 0 30px;
+	margin: 0 10px;
+	text-transform: uppercase;
+	font-weight: 700;
+	background-color: rgb(175, 23, 244);
+	color: #fff;
 	user-select: none;
 	cursor: pointer;
 	white-space: nowrap;

@@ -13,11 +13,28 @@ const Panels = () => {
 						Services
 					</h2>
 				</div>
-				<aside className={styles.aside}>
-					Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio blanditiis explicabo quis ab
-					doloribus in quos esse pariatur, modi repellat impedit eius asperiores, alias voluptatem ipsam quasi
-					dolorem officiis fuga.
-				</aside>
+				<div className={styles.panel_wrapper}>
+					<div className={styles.panel}>
+						<Image src="/images/socialmedia.webp" width={60} height={60} alt=""/>
+						<h3>Social Proof</h3>
+						<p>Produce the highest quality work and services for every client, on every project.</p>
+					</div>
+					<div className={styles.panel}>
+						<Image src="/images/socialmedia.webp" width={60} height={60} alt=""/>
+						<h3>Integration</h3>
+						<p>Produce the highest quality work and services for every client, on every project.</p>
+					</div>
+					<div className={styles.panel}>
+						<Image src="/images/socialmedia.webp" width={60} height={60} alt=""/>
+						<h3>Ecommerce</h3>
+						<p>Produce the highest quality work and services for every client, on every project.</p>
+					</div>
+					<div className={styles.panel}>
+						<Image src="/images/socialmedia.webp" width={60} height={60} alt=""/>
+						<h3>Customization</h3>
+						<p>Produce the highest quality work and services for every client, on every project.</p>
+					</div>
+				</div>
 				<Image className={styles.cube} src='/images/cube.png' width={600} height={600} alt='' />
 				<Image className={styles.cube2} src='/images/cube.png' width={600 / 2} height={600 / 2} alt='' />
 				<Image className={styles.cube3} src='/images/cube.png' width={600 / 3} height={600 / 3} alt='' />

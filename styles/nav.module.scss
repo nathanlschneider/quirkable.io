@@ -81,7 +81,7 @@
 	filter: drop-shadow(2px 4px 6px #00000055);
 	color: var(--nav-logo-color);
 	position: var(--nav-position);
-	z-index: 9999;
+	z-index: 999999;
 	transition: var(--transition);
 	background-color: var(--nav-bg-color);
 	position: var(--nav-position);
@@ -92,7 +92,7 @@
 	padding: var(--main-pad);
 	margin: 0 auto;
 	top: var(--top);
-	// mix-blend-mode: difference;
+	mix-blend-mode: var(--mix-mode);
 	visibility: var(--visibility);
 
 	&_left {

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "@styles/nav.module.scss";
 
-const NavLinks = () => {
+const NavLinks = (props) => {
 	return (
 		<>
 			<Link className={styles.nav_btn} href='/products'>
@@ -10,9 +10,9 @@ const NavLinks = () => {
 			<Link className={styles.nav_btn} href='/support'>
 				<span>support</span>
 			</Link>
-			<Link className={styles.nav_btn} href='/contact'>
+			<div className={styles.nav_btn} onClick={props}>
 				<span>contact</span>
-			</Link>
+			</div>
 		</>
 	);
 };
