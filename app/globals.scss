@@ -38,6 +38,7 @@
 	--visibility: "visible";
 	--test-speed: 0.5s;
 	--scroll-lock: none;
+	--section-top: 150px;
 }
 
 :focus-visible {
@@ -100,16 +101,13 @@ h4 {
 
 h5 {
 	margin-top: 0px;
-	margin-bottom: 40px;
 	font-size: 18px;
 	line-height: 1.5em;
 	font-weight: 700;
 	letter-spacing: 1.5px;
 	text-transform: uppercase;
-	// color: #af17f4;
 	text-align: center;
-
-	color: #dadada !important;
+	color: #fff !important;
     margin-bottom: 40px;
     border-bottom: 4px solid rgba(212, 0, 255, 0.8);
     padding-bottom: 10px;

@@ -4,7 +4,6 @@ import Newsletter from "@components/sections/Newsletter";
 import Panels from "@components/sections/Panels";
 import Platforms from "@components/sections/Platforms";
 import Slosh from "@components/Slosh";
-import Bumps from "@components/Bumps";
 import styles from "@styles/page.module.scss";
 import ThreeCards from "@components/sections/ThreeCards";
 import WordScroller from "@components/WordScroller";
@@ -19,18 +18,16 @@ export default function App() {
 					position: "relative",
 					zIndex: 9,
 					background: "linear-gradient(36deg, #0a0335 10%, #3f20ad 49%, #cb00f4 97%)",
+					paddingTop: `var(--section-top)`,
 				}}>
 				<About />
 				<ThreeCards />
-				{/* <WordScroller /> */}
-				{/* <Newsletter /> */}
-
-				<Platforms/>
-				<Panels/>
+				<WordScroller />
+				<Newsletter />
+				<Platforms />
+				<Panels />
 				<Contact />
-
 				<Slosh />
-
 			</div>
 		</>
 	);

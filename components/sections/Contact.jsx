@@ -9,7 +9,7 @@ const Contact = () => {
 								<h5>Contact</h5>
 
 			<section className={styles.contact_inner}>
-				<Image className={styles.astro_mail} src='/images/mail.png' width={400} height={400} alt='' />
+				<Image className={styles.astro_mail} src='/images/mail.png' width={300} height={300} alt='' />
 				<div>
 					<h2 className={lexend_deca.className}>
 						Need some work done?

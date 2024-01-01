@@ -4,6 +4,8 @@
     overflow: hidden;
     // filter: drop-shadow(2px 4px 10px black);
     box-shadow: 0px 0px 153px #d540ff;
+    margin-top: var(--section-top);
+
 
     &_inner {
         position: relative;

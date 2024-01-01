@@ -4,16 +4,12 @@
 	@include section_guts;
 	position: relative;
 	color: #fff;
-	height: 80dvh;
-	padding-top: 20dvh;
-	z-index: 9;
 	display: flex;
-	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-
 	h1 {
 		font-size: clamp(1.5rem, 20vw, 9rem);
+		line-height: clamp(1.5rem, 20vw, 9rem);
 		font-weight: 600;
 	}
 
@@ -21,6 +17,9 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		background: #ffffff12;
+		padding: 40px;
+		border-radius: 20px;
 
 		&_left {
 			width: 50%;

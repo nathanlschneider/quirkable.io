@@ -25,18 +25,18 @@
 }
 .panels {
 	background: radial-gradient(circle, #4528f97d -20%, rgb(255 255 255 / 0%) 45%);
-	z-index: 1;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	margin-top: var(--section-top);
+
 
 	&_inner {
 		max-width: var(--max-page-width);
 		width: 70dvw;
 		color: #fff;
 		.header {
-			// margin: 7rem 20px;
 			h2 {
 				text-align: center;
 				margin-bottom: 40px;
@@ -51,10 +51,10 @@
 			.panel {
 				// filter: drop-shadow(2px 4px 6px magenta);
 				&:hover {
-					color:#542eee;
+					color: #542eee;
 					background: #ffffffd1;
 					h3 {
-						color:#542eee;
+						color: #542eee;
 					}
 				}
 				cursor: pointer;

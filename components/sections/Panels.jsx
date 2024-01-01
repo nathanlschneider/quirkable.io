@@ -11,7 +11,7 @@ const Panels = () => {
 			<section className={styles.panels_inner}>
 				<div className={styles.header}>
 					<h2 className={lexend_deca.className}>
-						We build ideas driven
+						We develop ideas driven
 						<br />
 						by the future.
 					</h2>

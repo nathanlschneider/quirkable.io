@@ -39,7 +39,6 @@ const Hero = () => {
 	const heroPhrases = Array(
 		["The", "Web", "Is", "A", "Strange", "Place..."],
 		["We'll", "Navigate", "You", "to", "success!"],
-		["With", "Our", "Software", "Solutions."],
 		["Scroll", "Down", "To", "Find", "Out", "More"]
 	);
 

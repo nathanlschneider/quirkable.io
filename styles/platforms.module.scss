@@ -1,15 +1,14 @@
 @import "./mixins/mixins.scss";
 
 .platforms {
-	height: 55dvh;
-    margin-top: 80px;
+	margin-top: var(--section-top);
+
 	&_inner {
 		@include section_guts;
 		max-width: var(--max-page-width);
 		margin: 0 auto;
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		transition: 1s;
 
 		h1 {
 			grid-row: 2;
