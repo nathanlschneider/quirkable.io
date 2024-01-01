@@ -25,28 +25,31 @@
 }
 .panels {
 	background: radial-gradient(circle, #4528f97d -20%, rgb(255 255 255 / 0%) 45%);
-	height: 100dvh;
-	// overflow: hidden;
-	@include section_guts;
 	z-index: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
 
 	&_inner {
 		max-width: var(--max-page-width);
-		width: 100dvw;
+		width: 70dvw;
 		color: #fff;
 		.header {
-			margin: 7rem 20px;
+			// margin: 7rem 20px;
 			h2 {
-				text-align: right;
+				text-align: center;
+				margin-bottom: 40px;
 			}
 		}
 
 		.panel_wrapper {
 			display: flex;
 			flex-wrap: wrap;
+			justify-content: center;
 			gap: 40px;
 			.panel {
-				filter: drop-shadow(2px 4px 6px magenta);
+				// filter: drop-shadow(2px 4px 6px magenta);
 				&:hover {
 					color:#542eee;
 					background: #ffffffd1;
@@ -57,9 +60,9 @@
 				cursor: pointer;
 				display: grid;
 				// border: 1px solid #fff;
-				background-color: #6949e9bd;
+				background-color: rgba(255, 255, 255, 0.0666666667);
 				width: 48%;
-				// max-width: 530px;
+				max-width: 530px;
 				padding: 35px;
 				overflow: hidden;
 				grid-template-columns: 0.25fr 1fr;

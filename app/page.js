@@ -21,13 +21,16 @@ export default function App() {
 					background: "linear-gradient(36deg, #0a0335 10%, #3f20ad 49%, #cb00f4 97%)",
 				}}>
 				<About />
-				<Newsletter />
 				<ThreeCards />
-				<WordScroller />
-				<Contact />
+				{/* <WordScroller /> */}
+				{/* <Newsletter /> */}
+
 				<Platforms/>
 				<Panels/>
+				<Contact />
+
 				<Slosh />
+
 			</div>
 		</>
 	);

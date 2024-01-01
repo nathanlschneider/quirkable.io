@@ -10,9 +10,9 @@ const NavLinks = (props) => {
 			<Link className={styles.nav_btn} href='/support'>
 				<span>support</span>
 			</Link>
-			<div className={styles.nav_btn} onClick={props}>
+			<Link className={styles.nav_btn} href='#contact'>
 				<span>contact</span>
-			</div>
+			</Link>
 		</>
 	);
 };

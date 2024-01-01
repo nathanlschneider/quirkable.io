@@ -20,31 +20,29 @@ const Platforms = (props) => {
 						gridRow: "1",
 						gridColumn: "1 /span 3",
 						flexDirection: "column",
-						gap: "20px 40px",
-					}}
-				>
-					<h5 style={{ color: "var(--pink)" }}>APPS</h5>
-					<h1 style={{ color: "#fff", fontSize: "46px" }} className={`${lexend_deca.className}`}>
+					}}>
+					<h5 style={{ color: "var(--pink)" }}>Platforms</h5>
+					<h2 style={{ color: "#fff" }} className={`${lexend_deca.className}`}>
 						Platforms we build solutions for
-					</h1>
+					</h2>
 				</div>
-				<Shifter className={styles.shifter} />
 				<div
 					style={{
 						display: "flex",
 						justifyContent: "space-between",
 						gridRow: "2",
 						gridColumn: "1 /span 3",
-					}}
-				>
+						background: "#ffffff12",
+						padding: "40px",
+						borderRadius: "20px",
+					}}>
 					<div
 						style={{
 							display: "flex",
 							flexDirection: "column",
 							alignItems: "center",
 							justifyContent: "center",
-						}}
-					>
+						}}>
 						<Joomla width={128} height={128} viewBox={"0 0 32 32"} />
 						<h3 style={{ color: "#fff)", fontSize: "24px" }} className={`${nunito.className}`}>
 							Joomla
@@ -59,8 +57,7 @@ const Platforms = (props) => {
 							flexDirection: "column",
 							alignItems: "center",
 							justifyContent: "center",
-						}}
-					>
+						}}>
 						<WordPress width={128} height={128} viewBox={"0 0 32 32"} />
 						<h3 style={{ fontSize: "24px" }} className={`${nunito.className}`}>
 							WordPress
@@ -75,8 +72,7 @@ const Platforms = (props) => {
 							flexDirection: "column",
 							alignItems: "center",
 							justifyContent: "center",
-						}}
-					>
+						}}>
 						<Basecamp width={128} height={128} viewBox={"0 0 32 32"} />
 						<h3 style={{ fontSize: "24px" }} className={`${nunito.className}`}>
 							Basecamp
@@ -91,8 +87,7 @@ const Platforms = (props) => {
 							flexDirection: "column",
 							alignItems: "center",
 							justifyContent: "center",
-						}}
-					>
+						}}>
 						<Shopify width={128} height={128} viewBox={"0 0 32 32"} />
 						<h3 style={{ fontSize: "24px" }} className={`${nunito.className}`}>
 							Shopify
@@ -108,8 +103,7 @@ const Platforms = (props) => {
 							flexDirection: "column",
 							alignItems: "center",
 							justifyContent: "center",
-						}}
-					>
+						}}>
 						<WooCommerce width={128} height={128} />
 						<h3 style={{ fontSize: "24px" }} className={`${nunito.className}`}>
 							WooCommerce

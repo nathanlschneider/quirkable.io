@@ -2,17 +2,17 @@
 
 .threecards {
 	@include section_guts;
-	height: 80dvh;
+	height: 85dvh;
+	margin-top: 100px;
 	display: flex;
 	align-self: center;
-	margin: 10% 0;
 	h2 {
 		font-size: 4rem;
 		text-align: center;
 	}
 	&_inner {
 		display: flex;
-		justify-content: space-evenly;
+		// justify-content: space-evenly;
 		align-items: center;
 		position: relative;
 		flex-direction: column;
@@ -32,9 +32,13 @@
 			display: flex;
 			align-items: center;
 			justify-content: space-between;
-			container-type: cards / inline-size;
+			margin: 40px 0px;
 
 			.card {
+				background: #ffffff12;
+				padding: 40px;
+				border-radius: 20px;
+				min-height: 581px;
 				img {
 					filter: drop-shadow(0px 0px 30px rgba(212, 0, 255, 0.8));
 					justify-self: center;
@@ -46,6 +50,7 @@
 				p {
 					font-size: 1.2rem;
 					line-height: 25px;
+					height: 150px;
 				}
 
 				&_btn {

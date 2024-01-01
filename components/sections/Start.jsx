@@ -20,7 +20,7 @@ const Start = (props) => {
 		// <Asteroid key={7} />,
 		// <Asteroid key={8} />,
 		// <Asteroid key={9} />,
-		
+
 		// <Asteroid key={2010} />,
 		// <Asteroid key={2011} />,
 		// <Asteroid key={2012} />,
@@ -28,13 +28,12 @@ const Start = (props) => {
 		// <Asteroid key={2014} />,
 
 		// <Asteroid key={1001} src='/images/seo2.png' alt='SEO' />,
-	    // <Asteroid key={1002} src='/images/socialmedia.webp' alt='Social Thums Up' />,
-        // <Asteroid key={1003} src='/images/heart.png' alt='Social Heart' />,
+		// <Asteroid key={1002} src='/images/socialmedia.webp' alt='Social Thums Up' />,
+		// <Asteroid key={1003} src='/images/heart.png' alt='Social Heart' />,
 		// <Asteroid key={1004} src='/images/code.png' alt='Code' />,
-	    // <Asteroid key={1005} src='/images/emoji.png' alt='Emoji' />,
-        <Asteroid key={1006} src='/images/hashtag.png' alt='Hashtag' />,
+		// <Asteroid key={1005} src='/images/emoji.png' alt='Emoji' />,
+		<Asteroid key={1006} src='/images/hashtag.png' alt='Hashtag' />,
 		<Asteroid key={1007} src='/images/at.png' alt='@' />,
-
 	];
 
 	const container = {
@@ -62,18 +61,17 @@ const Start = (props) => {
 		<>
 			<section style={props.style} className={styles.start} onClick={handleClick}>
 				<section className={styles.start_inner}>
-				
-				{props.showHero	&& <Hero />}
+					{props.showHero && <Hero />}
 
-				<motion.div
-					variants={container}
-					initial='hidden'
-					animate='show'
-					transition={{ delay: 1 }}
-					className={styles.plus_wrapper}>
-					<Image className={styles.plus} src='/images/plus.png' width={950} height={1050} alt='' />
-				</motion.div>
-				<Image
+					<motion.div
+						variants={container}
+						initial='hidden'
+						animate='show'
+						transition={{ delay: 1 }}
+						className={styles.plus_wrapper}>
+						<Image className={styles.plus} src='/images/plus.png' width={950} height={1050} alt='' />
+					</motion.div>
+					<Image
 						className={styles.rocket}
 						src='/images/rocket.png'
 						width={400}
@@ -87,11 +85,17 @@ const Start = (props) => {
 						height={400 / 3}
 						alt='Space Rocket'
 					/>
-				<motion.div variants={container} initial='hidden' animate='show' className={styles.plus_wrapper_b}>
-					<Image className={styles.plus_b} src='/images/plus.png' width={950 / 2} height={1050 / 2} alt='' />
-				</motion.div>
-
-				{asteroidField}
+					<motion.div variants={container} initial='hidden' animate='show' className={styles.plus_wrapper_b}>
+						<Image
+							className={styles.plus_b}
+							src='/images/plus.png'
+							width={950 / 2}
+							height={1050 / 2}
+							alt=''
+						/>
+					</motion.div>
+					<Image className={styles.astro_float} src='/images/laptop.webp' width={256} height={361} alt='' />
+					{asteroidField}
 				</section>
 			</section>
 			<Scroller onClick={handleScroll} />

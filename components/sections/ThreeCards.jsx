@@ -1,10 +1,13 @@
 import styles from "@styles/threecards.module.scss";
 import Image from "next/image";
+import { inter, lexend_deca } from "../../app/fonts";
+
 const ThreeCards = (props) => {
 	return (
 		<section className={styles.threecards}>
 			<section className={styles.threecards_inner}>
-			<h2>We launch visionary ideas,<br/>propelling you towards the future.</h2>
+				<h5>Services</h5>
+			<h2 className={lexend_deca.className}>We launch visionary ideas,<br/>propelling you towards the future.</h2>
 
 				<div className={styles.cards}>
 					<div className={styles.card}>
@@ -44,7 +47,7 @@ const ThreeCards = (props) => {
 					</div>
 				</div>
 				<div className={styles.rocket_wrapper}>
-					<Image className={styles.rocket} src='/images/rocket.png' width={200} height={200} alt='Rocket' />
+					<Image className={styles.rocket} src='/images/jetpack.png' width={200} height={200} alt='Rocket' />
 				</div>
 			</section>
 		</section>

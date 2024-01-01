@@ -1,41 +1,29 @@
 @import "./mixins/mixins.scss";
 
-
-
-.shifter {
-    position: absolute;
-    opacity: var(--opacity);
-    bottom: 20px;
-    fill: var(--shifty);
-    width: 642px;
-    left: calc(50% - 321px);
-    z-index: -1;
-}
-
 .platforms {
-    z-index: 1;
-    &_inner {
-        @include section_guts;
-        max-width: var(--max-page-width);
-        margin: 0 auto;
-        display: grid;
-        padding: 12vw 0px;
-        grid-template-columns: repeat(3, 1fr);
-        transition: 1s;
+	height: 55dvh;
+    margin-top: 80px;
+	&_inner {
+		@include section_guts;
+		max-width: var(--max-page-width);
+		margin: 0 auto;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		transition: 1s;
 
-        h1 {
-            grid-row: 2;
-            grid-column: 1 / span 3;
-        }
-        h3 {
-            font-weight: bold;
-            margin-bottom: 10px;
-            color: #fff;
-        }
+		h1 {
+			grid-row: 2;
+			grid-column: 1 / span 3;
+		}
+		h3 {
+			font-weight: bold;
+			margin-bottom: 10px;
+			color: #fff;
+		}
 
-        p {
-            color: #fff;
-        }
-        // height: unset;
-    }
+		p {
+			color: #fff;
+		}
+		// height: unset;
+	}
 }

@@ -4,7 +4,8 @@
 	@include section_guts;
 	position: relative;
 	color: #fff;
-	height: 100dvh;
+	height: 80dvh;
+	padding-top: 20dvh;
 	z-index: 9;
 	display: flex;
 	justify-content: center;
@@ -18,34 +19,22 @@
 
 	&_inner {
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
 		align-items: center;
 
 		&_left {
 			width: 50%;
-			.wheel {
-				animation: wheel linear;
-				animation-timeline: view();
-				filter: drop-shadow(0px 0px 100px rgba(212, 0, 255, 0.8));
-				@keyframes wheel {
-					0% {
-						transform: translateX(-10vw) rotate(-40deg);
-						opacity: 0;
-					}
-					50% {
-						opacity: 1;
-					}
-
-					100% {
-						transform: translateX(10vw) rotate(40deg);
-						opacity: 0;
-					}
-				}
+			.aboard {
+				filter: drop-shadow(2px 4px 67px orange);
+				scale: 0.8;
 			}
 		}
 
 		&_right {
 			.quote {
+				// background: #ffffff12;
+				padding: 40px;
+				// border-radius: 20px;
 				margin: 0 20px;
 				grid-column: 5/9;
 				grid-row: 3;
