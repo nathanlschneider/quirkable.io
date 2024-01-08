@@ -1,4 +1,4 @@
-@import "mixins/mixins.scss";
+@import 'mixins/mixins.scss';
 
 .cube {
 	position: absolute;
@@ -31,7 +31,6 @@
 	flex-direction: column;
 	margin-top: var(--section-top);
 
-
 	&_inner {
 		max-width: var(--max-page-width);
 		width: 70dvw;
@@ -44,15 +43,32 @@
 		}
 
 		.panel_wrapper {
+			
 			display: flex;
 			flex-wrap: wrap;
 			justify-content: center;
+			
+			position: relative;
 			gap: 40px;
+			
 			.panel {
-				// filter: drop-shadow(2px 4px 6px magenta);
+				
+				&:nth-of-type(1) {
+					
+				}
+				&:nth-of-type(2) {
+					
+				}
+				&:nth-of-type(3) {
+					
+				}
+				&:nth-of-type(4) {
+					
+				}
+
 				&:hover {
 					color: #542eee;
-					background: #ffffffd1;
+					background: #fff;
 					h3 {
 						color: #542eee;
 					}
@@ -60,7 +76,7 @@
 				cursor: pointer;
 				display: grid;
 				// border: 1px solid #fff;
-				background-color: rgba(255, 255, 255, 0.0666666667);
+				background-color: var(--glass);
 				width: 48%;
 				max-width: 530px;
 				padding: 35px;

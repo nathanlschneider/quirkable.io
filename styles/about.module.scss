@@ -2,6 +2,7 @@
 
 .about {
 	@include section_guts;
+	transition: 1.5s;
 	position: relative;
 	color: #fff;
 	display: flex;
@@ -12,6 +13,9 @@
 		line-height: clamp(1.5rem, 20vw, 9rem);
 		font-weight: 600;
 	}
+	h2 {
+		margin-bottom: 40px;
+	}
 
 	&_inner {
 		display: flex;
@@ -20,25 +24,22 @@
 		background: #ffffff12;
 		padding: 40px;
 		border-radius: 20px;
+		width: 100%;
 
 		&_left {
 			width: 50%;
 			.aboard {
-				filter: drop-shadow(2px 4px 67px orange);
-				scale: 0.8;
+				
 			}
 		}
 
 		&_right {
 			.quote {
-				// background: #ffffff12;
 				padding: 40px;
-				// border-radius: 20px;
 				margin: 0 20px;
 				grid-column: 5/9;
 				grid-row: 3;
-				// animation: pushin linear;
-				// animation-timeline: scroll(root);
+				
 				&_title {
 					font-size: 6rem;
 					font-weight: 600;
@@ -75,21 +76,6 @@
 					}
 				}
 			}
-		}
-		h2.h2 {
-			margin: 0 20px;
-			font-size: 7rem;
-			font-weight: 600;
-			grid-row: 3 / span 3;
-			grid-column: 2 / span 3;
-			position: relative;
-			z-index: 9;
-			// animation: slidein linear;
-			// animation-timeline: scroll(root);
-			text-align: end;
-			border-right: 10px solid;
-			padding-right: 27px;
-			max-height: 400px;
 		}
 	}
 }

@@ -1,15 +1,34 @@
-import styles from "@styles/about.module.scss";
-import Image from "next/image";
-import { lexend_deca } from "@app/fonts";
+'use client';
+import styles from '@styles/about.module.scss';
+import Image from 'next/image';
+import { lexend_deca } from '@app/fonts';
+import { useInView } from 'framer-motion';
+import { useRef, useEffect } from 'react';
+
 const About = (props) => {
+	const ref = useRef();
+	const isInView = useInView(ref, { amount: .8 });
+
 	return (
-		<section className={styles.about}>
+		<section ref={ref} className={styles.about}>
 			<h5>Space is the Place</h5>
 			<h1>Welcome Aboard!</h1>
-			<h2 className={lexend_deca.className} style={{fontSize: "3rem", padding: '20px 60px', textAlign: "center"}}>Quirkable is a web software and services company that is here to help you reach for the stars.</h2>
+			<h2
+				className={lexend_deca.className}
+				style={{ fontSize: '3rem', padding: '20px 60px', textAlign: 'center', maxWidth: '1366px' }}>
+				Quirkable is a web software and services company that is here to help you reach for the stars.
+			</h2>
 			<section className={styles.about_inner}>
 				<div className={styles.about_inner_left}>
-					<Image className={styles.aboard} src='/images/aboard.png' width={600} height={600} alt='' />
+					<Image
+						ref={ref}
+						style={{ transition: '1s', filter: isInView ? 'drop-shadow(2px 4px 67px orange)' : 'none' }}
+						className={styles.aboard}
+						src='/images/aboard.png'
+						width={500}
+						height={500}
+						alt=''
+					/>
 				</div>
 				<div className={styles.about_inner_right}>
 					<article className={styles.quote}>

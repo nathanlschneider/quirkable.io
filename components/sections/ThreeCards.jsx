@@ -1,15 +1,51 @@
-import styles from "@styles/threecards.module.scss";
-import Image from "next/image";
-import { inter, lexend_deca } from "../../app/fonts";
+'use client';
+import styles from '@styles/threecards.module.scss';
+import Image from 'next/image';
+import { inter, lexend_deca } from '../../app/fonts';
+import { useAnimate, useInView, stagger } from 'framer-motion';
+import { useEffect, useRef } from 'react';
 
 const ThreeCards = (props) => {
+	const ref = useRef();
+	const sectionInView = useInView(ref, { amount: 0 });
+	const [scope, animate] = useAnimate();
+	const isInView = useInView(scope, { amount: 0.75 });
+
+	useEffect(() => {
+	}, [sectionInView]);
+
+	useEffect(() => {
+		if (isInView) {
+			const doAnimate = async () => {
+				await animate(
+					scope.current,
+					{ opacity: 1, transform: 'translateX(0)' },
+					{ duration: 0.3, ease: 'easeInOut' }
+				);
+				await animate(
+					'img',
+					{ opacity: 1, transform: 'scale(1)' },
+					{ duration: 0.3, delay: stagger(0.1), type: 'spring', stiffness: 200 }
+				);
+			};
+			doAnimate();
+		}
+	}, [isInView]);
+
 	return (
-		<section className={styles.threecards}>
+		<section ref={ref} className={styles.threecards}>
 			<section className={styles.threecards_inner}>
 				<h5>Services</h5>
-			<h2 className={lexend_deca.className}>We launch visionary ideas,<br/>propelling you towards the future.</h2>
+				<div className={styles.rocket_wrapper}>
+					<Image className={styles.rocket} src='/images/jetpack.png' width={200} height={200} alt='Rocket' />
+				</div>
+				<h2 className={lexend_deca.className}>
+					We launch visionary ideas,
+					<br />
+					propelling you towards the future.
+				</h2>
 
-				<div className={styles.cards}>
+				<div ref={scope} className={styles.cards}>
 					<div className={styles.card}>
 						<Image src='/images/puzzle.webp' width={200} height={200} alt='Puzzle Piece' />
 						<div className={styles.card_content}>
@@ -45,9 +81,6 @@ const ThreeCards = (props) => {
 							<div className={`${styles.card_btn} btn`}>Read More</div>
 						</div>
 					</div>
-				</div>
-				<div className={styles.rocket_wrapper}>
-					<Image className={styles.rocket} src='/images/jetpack.png' width={200} height={200} alt='Rocket' />
 				</div>
 			</section>
 		</section>

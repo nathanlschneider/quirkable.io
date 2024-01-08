@@ -20,11 +20,11 @@
 			width: 45%;
 			transform-origin: right center;
 			position: absolute;
-			bottom: 0;
-			left: 0;
+			// bottom: 0;
+			// left: 0;
 
 			.rocket {
-				rotate: -50deg;
+				// rotate: -50deg;
 			}
 		}
 
@@ -33,6 +33,8 @@
 			align-items: center;
 			justify-content: space-between;
 			margin: 40px 0px;
+			opacity: 0;
+			transform: translateX(-100px);
 
 			.card {
 				background: #ffffff12;
@@ -42,6 +44,8 @@
 				img {
 					filter: drop-shadow(0px 0px 30px rgba(212, 0, 255, 0.8));
 					justify-self: center;
+					opacity: 0;
+					transform: scale(0);
 				}
 				text-align: center;
 				width: 30%;

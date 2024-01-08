@@ -9,7 +9,7 @@
 	--nav-text-color: #fff;
 	--nav-logo-color: #fff;
 	--nav-bg-color: transparent;
-	--light: #f6ebff;
+	--ligh-purple: #f6ebff;
 	--deep-purple: #4528f9;
 	--light-purple: #9489da;
 	--pink: #af17f4;
@@ -21,6 +21,10 @@
 	--light-fill: #4388e0;
 	--shifty: #6949e9;
 	--hot-pink: #fe00b9;
+	--glass: #ffffff12;
+
+	--light: #ffffff;
+	--dark: #101010;
 }
 /* Spec Vars */
 :root {
@@ -39,6 +43,7 @@
 	--test-speed: 0.5s;
 	--scroll-lock: none;
 	--section-top: 150px;
+	--display: flex;
 }
 
 :focus-visible {

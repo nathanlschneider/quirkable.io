@@ -54,7 +54,6 @@ const Start = (props) => {
 	};
 
 	const handleScroll = (e) => {
-		console.log(e);
 	};
 
 	return (
@@ -98,7 +97,6 @@ const Start = (props) => {
 					{asteroidField}
 				</section>
 			</section>
-			<Scroller onClick={handleScroll} />
 		</>
 	);
 };
