@@ -1,7 +1,9 @@
 .xxl {
 	&_h1 {
-		font-size: clamp(12cqi, 12lvw, 20cqmax);
-		line-height: clamp(12cqi, 12lvw, 20cqmax);
+		// font-size: clamp(12cqi, 12lvw, 20cqmax);
+		// line-height: clamp(12cqi, 12lvw, 20cqmax);
+		font-size: 12dvw;
+		line-height: 12dvw;
 
 		color: #fff;
 		font-weight: 700;

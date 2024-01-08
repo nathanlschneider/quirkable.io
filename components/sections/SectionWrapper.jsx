@@ -14,7 +14,7 @@ const SectionWrapper = ({ children }) => {
 	}, [isInView]);
 
 
-	return <div ref={ref} className={styles.wrapper}>{children}</div>;
+	return <section ref={ref} className={styles.wrapper}>{children}</section>;
 };
 
 export default SectionWrapper;

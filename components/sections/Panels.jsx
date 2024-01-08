@@ -35,17 +35,17 @@ const Panels = () => {
 		}
 	}, [isInView]);
 	return (
-		<section className={styles.panels}>
-			<h5>Development</h5>
+		<article className={styles.panels}>
+			<div className='pre_title'>Development</div>
 
 			<section className={styles.panels_inner}>
-				<motion.div className={styles.header}>
+				<motion.header className={styles.header}>
 					<h2 className={lexend_deca.className}>
 						We develop ideas driven
 						<br />
 						by the future.
 					</h2>
-				</motion.div>
+				</motion.header>
 				<motion.div
 					ref={ref}
 					variants={container}
@@ -77,7 +77,7 @@ const Panels = () => {
 				<Image className={styles.cube2} src='/images/cube.png' width={600 / 2} height={600 / 2} alt='' />
 				<Image className={styles.cube3} src='/images/cube.png' width={600 / 3} height={600 / 3} alt='' /> */}
 			</section>
-		</section>
+		</article>
 	);
 };
 
