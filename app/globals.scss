@@ -62,10 +62,22 @@ body {
 }
 
 article {
+  // transition: 1.5s;
+  position: relative;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
   & > header,
   & > section:first-of-type {
     max-width: var(--max-page-width);
     width: 100%;
+  }
+
+  & > header {
+    margin: var(--40px) 0rem;
+
   }
 }
 
@@ -75,6 +87,11 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
+  
+}
+
+h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 

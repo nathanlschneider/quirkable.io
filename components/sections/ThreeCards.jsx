@@ -25,15 +25,15 @@ const ThreeCards = (props) => {
 
   return (
     <article ref={ref} className={styles.threecards}>
+      <header>
+        <div className="pre_headline">Services</div>
+        <h2 className={lexend_deca.className}>
+          We launch visionary ideas,
+          <br />
+          propelling you towards the future.
+        </h2>
+      </header>
       <section className={styles.threecards_inner}>
-        <header>
-          <div className="pre_headline">Services</div>
-          <h2 className={lexend_deca.className}>
-            We launch visionary ideas,
-            <br />
-            propelling you towards the future.
-          </h2>
-        </header>
         <section ref={scope} className={styles.cards}>
           <article className={styles.card}>
             <Image src="/images/puzzle.webp" width={200} height={200} alt="Puzzle Piece" />
@@ -59,8 +59,8 @@ const ThreeCards = (props) => {
             <Image src="/images/thumbsup.webp" width={200} height={200} alt="Thumbs Up" />
             <section className={styles.card_content}>
               <header>
-			  <h3>Developer-Focused</h3>
-			  </header>
+                <h3>Developer-Focused</h3>
+              </header>
               <p>Our products are designed with developers in mind. Unlock the full potential of your projects with Quirkable.io, where coding meets creativity for unparalleled digital solutions.</p>
               <div className={`${styles.card_btn} btn`}>Read More</div>
             </section>

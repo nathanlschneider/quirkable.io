@@ -1,171 +1,140 @@
-@import 'mixins/mixins.scss';
+@import "mixins/mixins.scss";
 
 .cube {
-	position: absolute;
-	right: -158px;
-	z-index: -1;
-	bottom: 53px;
-	filter: saturate(1.2);
-	@include test;
+  position: absolute;
+  right: -158px;
+  z-index: -1;
+  bottom: 53px;
+  filter: saturate(1.2);
+  @include test;
 
-	&2 {
-		position: absolute;
-		left: -14%;
-		z-index: 9;
-		filter: saturate(1.2);
-		@include test;
-	}
-	&3 {
-		position: absolute;
-		top: 0;
-		right: 36%;
-		filter: saturate(1.2);
-		@include test;
-	}
+  &2 {
+    position: absolute;
+    left: -14%;
+    z-index: 9;
+    filter: saturate(1.2);
+    @include test;
+  }
+  &3 {
+    position: absolute;
+    top: 0;
+    right: 36%;
+    filter: saturate(1.2);
+    @include test;
+  }
 }
 .panels {
-	background: radial-gradient(circle, #4528f97d -20%, rgb(255 255 255 / 0%) 45%);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	margin-top: var(--section-top);
+  background: radial-gradient(circle, #4528f97d -20%, rgb(255 255 255 / 0%) 45%);
 
-	&_inner {
-		max-width: var(--max-page-width);
-		width: 70dvw;
-		color: #fff;
-		.header {
-			h2 {
-				text-align: center;
-				margin-bottom: 40px;
-			}
-		}
+  &_inner {
+    .panel_wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      position: relative;
+      gap: var(--40px);
 
-		.panel_wrapper {
-			
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			
-			position: relative;
-			gap: 40px;
-			
-			.panel {
-				
-				&:nth-of-type(1) {
-					
-				}
-				&:nth-of-type(2) {
-					
-				}
-				&:nth-of-type(3) {
-					
-				}
-				&:nth-of-type(4) {
-					
-				}
+      .panel {
+        &:hover {
+          color: #542eee;
+          background: #fff;
+          h3 {
+            color: #542eee;
+          }
+        }
+        cursor: pointer;
+        display: grid;
+        // border: 1px solid #fff;
+        background-color: var(--glass);
+        width: 48%;
+        max-width: 530px;
+        padding: 35px;
+        overflow: hidden;
+        grid-template-columns: 0.25fr 1fr;
+        grid-template-rows: 30px 1fr;
+        border-radius: 16px;
+        height: 148px;
+        img {
+          grid-column: 1;
+          grid-row: 1 / span 2;
+          align-self: self-start;
+          justify-self: center;
+        }
+        h3 {
+          grid-column: 2;
+          font-size: 20px;
+        }
+        p {
+          grid-column: 2;
+          grid-row: 2;
+          font-size: 1rem;
+        }
+      }
+    }
+    // .cards {
+    // 	position: relative;
+    // 	display: flex;
+    // 	flex-wrap: wrap;
+    // 	flex-direction: column;
+    // 	text-align: right;
+    // 	top: -317px;
+    // 	.card {
 
-				&:hover {
-					color: #542eee;
-					background: #fff;
-					h3 {
-						color: #542eee;
-					}
-				}
-				cursor: pointer;
-				display: grid;
-				// border: 1px solid #fff;
-				background-color: var(--glass);
-				width: 48%;
-				max-width: 530px;
-				padding: 35px;
-				overflow: hidden;
-				grid-template-columns: 0.25fr 1fr;
-				grid-template-rows: 30px 1fr;
-				border-radius: 16px;
-				height: 148px;
-				img {
-					grid-column: 1;
-					grid-row: 1 / span 2;
-					align-self: self-start;
-					justify-self: center;
-				}
-				h3 {
-					grid-column: 2;
-					font-size: 20px;
-				}
-				p {
-					grid-column: 2;
-					grid-row: 2;
-					font-size: 1rem;
-				}
-			}
-		}
-		// .cards {
-		// 	position: relative;
-		// 	display: flex;
-		// 	flex-wrap: wrap;
-		// 	flex-direction: column;
-		// 	text-align: right;
-		// 	top: -317px;
-		// 	.card {
+    // 		div {
+    // 			display: none;
+    // 		}
+    // 		color: #fff;
+    // 		line-height: 34px;
+    // 		padding-bottom: 20px;
+    // 		margin-bottom: 20px;
+    // 		border-bottom: 1px solid;
+    // 		transition: 0.2s;
+    // 		transition-delay: 0.2s;
+    // 		transition-timing-function: linear;
+    // 		max-width: 30%;
+    // 		cursor: pointer;
 
-		// 		div {
-		// 			display: none;
-		// 		}
-		// 		color: #fff;
-		// 		line-height: 34px;
-		// 		padding-bottom: 20px;
-		// 		margin-bottom: 20px;
-		// 		border-bottom: 1px solid;
-		// 		transition: 0.2s;
-		// 		transition-delay: 0.2s;
-		// 		transition-timing-function: linear;
-		// 		max-width: 30%;
-		// 		cursor: pointer;
+    // 		.active {
+    // 			max-width: 35%;
+    // 			border-color: var(--hot-pink);
 
-		// 		.active {
-		// 			max-width: 35%;
-		// 			border-color: var(--hot-pink);
+    // 			h2 {
+    // 				color: var(--hot-pink);
+    // 			}
+    // 		}
 
-		// 			h2 {
-		// 				color: var(--hot-pink);
-		// 			}
-		// 		}
-
-		// 		h2 {
-		// 			color: inherit;
-		// 			font-size: 2rem;
-		// 			text-transform: uppercase;
-		// 			font-weight: 800;
-		// 			// margin-bottom: 30px;
-		// 			position: relative;
-		// 			display: inline-block;
-		// 			&:after {
-		// 				position: absolute;
-		// 				// content: "";
-		// 				width: 100%;
-		// 				height: 16px;
-		// 				bottom: -16px;
-		// 				left: 0px;
-		// 				margin-top: 10px;
-		// 				background-image: linear-gradient(
-		// 					45deg,
-		// 					hsl(240deg 100% 20%) 0%,
-		// 					hsl(240, 72%, 27%) 11%,
-		// 					hsl(289deg 100% 21%) 22%,
-		// 					hsl(315deg 100% 27%) 33%,
-		// 					hsl(329deg 100% 36%) 44%,
-		// 					hsl(337deg 100% 43%) 55%,
-		// 					hsl(357deg 91% 59%) 66%,
-		// 					hsl(17deg 100% 59%) 77%,
-		// 					hsl(34deg 100% 53%) 89%,
-		// 					hsl(45deg 100% 50%) 100%
-		// 				);
-		// 			}
-		// 		}
-		// 	}
-		// }
-	}
+    // 		h2 {
+    // 			color: inherit;
+    // 			font-size: 2rem;
+    // 			text-transform: uppercase;
+    // 			font-weight: 800;
+    // 			// margin-bottom: 30px;
+    // 			position: relative;
+    // 			display: inline-block;
+    // 			&:after {
+    // 				position: absolute;
+    // 				// content: "";
+    // 				width: 100%;
+    // 				height: 16px;
+    // 				bottom: -16px;
+    // 				left: 0px;
+    // 				margin-top: 10px;
+    // 				background-image: linear-gradient(
+    // 					45deg,
+    // 					hsl(240deg 100% 20%) 0%,
+    // 					hsl(240, 72%, 27%) 11%,
+    // 					hsl(289deg 100% 21%) 22%,
+    // 					hsl(315deg 100% 27%) 33%,
+    // 					hsl(329deg 100% 36%) 44%,
+    // 					hsl(337deg 100% 43%) 55%,
+    // 					hsl(357deg 91% 59%) 66%,
+    // 					hsl(17deg 100% 59%) 77%,
+    // 					hsl(34deg 100% 53%) 89%,
+    // 					hsl(45deg 100% 50%) 100%
+    // 				);
+    // 			}
+    // 		}
+    // 	}
+    // }
+  }
 }

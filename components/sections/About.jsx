@@ -13,8 +13,7 @@ const About = (props) => {
     <article ref={ref} className={styles.about}>
       <header>
         <div className="pre_headline">Space is the Place</div>
-        <h2 className={inter.className}>Welcome Aboard!</h2>
-        <h3 className={lexend_deca.className}>Quirkable is a web software and services company that is here to help you reach for the stars.</h3>
+        <h2 className={lexend_deca.className}>Quirkable is a web software and services company that is here to help you reach for the stars.</h2>
       </header>
       <section className={styles.about_inner}>
         <div className={styles.about_inner_left}>

@@ -1,23 +1,9 @@
 
 .about {
-  transition: 1.5s;
-  position: relative;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
+
   header {
 	flex-direction: column;
-    h2 {
-      font-size: clamp(1.5rem, 20vw, 9rem);
-      line-height: clamp(1.5rem, 20vw, 9rem);
-      font-weight: 600;
-    }
-    h3 {
-      font-size: 3rem;
-      line-height: 2.8rem;
-      margin: .5em 0em 1.5em;
-    }
+   
   }
 
   &_inner {

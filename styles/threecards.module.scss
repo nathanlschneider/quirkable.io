@@ -1,69 +1,60 @@
-@import "mixins/mixins.scss";
-
 .threecards {
-	@include section_guts;
-	display: flex;
-	align-self: center;
-	margin-top: var(--section-top);
 
-	h2 {
-		font-size: 4rem;
-		text-align: center;
-	}
-	&_inner {
-		display: flex;
-		// justify-content: space-evenly;
-		align-items: center;
-		position: relative;
-		flex-direction: column;
-		.rocket_wrapper {
-			width: 45%;
-			transform-origin: right center;
-			position: absolute;
-			// bottom: 0;
-			// left: 0;
+  &_inner {
+    display: flex;
+    // justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    .rocket_wrapper {
+      width: 45%;
+      transform-origin: right center;
+      position: absolute;
+      // bottom: 0;
+      // left: 0;
 
-			.rocket {
-				// rotate: -50deg;
-			}
-		}
+      .rocket {
+        // rotate: -50deg;
+      }
+    }
 
-		.cards {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			margin: 40px 0px;
-			opacity: 0;
-			transform: translateX(-100px);
+    .cards {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      opacity: 0;
+      transform: translateX(-100px);
 
-			.card {
-				background: #ffffff12;
-				padding: 40px;
-				border-radius: 20px;
-				min-height: 581px;
-				img {
-					filter: drop-shadow(0px 0px 30px rgba(212, 0, 255, 0.8));
-					justify-self: center;
-					opacity: 0;
-					transform: scale(0);
-				}
-				text-align: center;
-				width: 30%;
-				display: grid;
-				grid-template-rows: 240px 1fr;
-				p {
-					font-size: 1.2rem;
-					line-height: 25px;
-					height: 150px;
-				}
+      .card {
+        background: #ffffff12;
+        padding: var(--40px);
+        border-radius: 20px;
+        min-height: 35rem;
+        h3 {
+          margin: 1rem 0rem;
+        }
+        img {
+          filter: drop-shadow(0px 0px 30px rgba(212, 0, 255, 0.8));
+          justify-self: center;
+          opacity: 0;
+          transform: scale(0);
+        }
+        text-align: center;
+        width: 30%;
+        display: grid;
+        grid-template-rows: var(--240px) 1fr;
+        p {
+          min-height: var(--150px);
+		  line-height: 1.4rem
+        }
 
-				&_btn {
-					display: inline-flex;
-					justify-content: center;
-					align-items: center;
-					margin: 20px 0px 0px 0px;
-				}
-			}
-		}
-	}
+        &_btn {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          margin: var(--20px) 0rem 0rem 0rem;
+        }
+      }
+    }
+  }
 }

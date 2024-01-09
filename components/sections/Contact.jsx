@@ -7,25 +7,19 @@ import { lexend_deca } from "../../app/fonts";
 const Contact = () => {
   return (
     <article id="contact" className={styles.contact}>
-      <div className="pre_title">Contact</div>
+      <div className="pre_headline">Contact</div>
       <section className={styles.contact_inner}>
         <Image className={styles.astro_mail} src="/images/mail.png" width={300} height={300} alt="" />
-        <div>
-          <header>
-            <h2 className={lexend_deca.className}>
-              Need some work done?
-              <br />
-              Drop a message.
-            </h2>
-          </header>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ex adipisci excepturi dicta laudantium quo maiores soluta distinctio, velit, odit optio nesciunt molestias vel at nisi sapiente corporis facilis porro?</p>
-        </div>
-        <div style={{ display: "flex" }}>
+        <header>
+          <h2 className={lexend_deca.className}>Need some work done?</h2>
+          <h3>Drop a message.</h3>
+        </header>
+        <section style={{ display: "flex", alignItems: "center" }}>
           <ContactButton />
-          <Link className="btn" href="/support">
+          <Link className={`${styles.btn} btn`} href="/support">
             Support
           </Link>
-        </div>
+        </section>
       </section>
     </article>
   );
