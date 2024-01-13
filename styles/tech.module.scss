@@ -1,0 +1,30 @@
+.technology {
+  position: relative;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h2 {
+   filter:  drop-shadow(2px 4px 96px var(--pink))
+  }
+}
+
+.technologies {
+    // position:absolute;
+    height: 200px;
+}
+
+.tech {
+  position: absolute;
+  transform-origin: center center;
+  left:0;
+  right:0;
+
+  filter: drop-shadow(0px 0px 50px var(--pink));
+  background: rgba(68, 0, 255, 0.038);
+}
+
+.technologies {
+   
+
+}

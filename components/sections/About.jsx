@@ -1,7 +1,7 @@
 "use client";
 import styles from "@styles/about.module.scss";
 import Image from "next/image";
-import { inter, lexend_deca } from "@app/fonts";
+import { lexend_deca } from "@app/fonts";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -12,8 +12,8 @@ const About = (props) => {
   return (
     <article ref={ref} className={styles.about}>
       <header>
-        <div className="pre_headline">Space is the Place</div>
-        <h2 className={lexend_deca.className}>Quirkable is a web software and services company that is here to help you reach for the stars.</h2>
+        <div className="pre_headline">Blast Off!</div>
+        <h2 className={lexend_deca.className}>Quirkable is a web software and services company that is here to help you reach the stars.</h2>
       </header>
       <section className={styles.about_inner}>
         <div className={styles.about_inner_left}>

@@ -1,3 +1,4 @@
+'use client';
 import Burger from "@components/NavBar/Burger";
 import styles from "@styles/nav.module.scss";
 import UserLogin from "./UserLogin";

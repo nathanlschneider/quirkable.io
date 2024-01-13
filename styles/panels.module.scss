@@ -11,13 +11,14 @@
   &2 {
     position: absolute;
     left: -14%;
-    z-index: 9;
+    z-index: -1;
     filter: saturate(1.2);
     @include test;
   }
   &3 {
     position: absolute;
     top: 0;
+    z-index: -1;
     right: 36%;
     filter: saturate(1.2);
     @include test;
@@ -35,11 +36,33 @@
       gap: var(--40px);
 
       .panel {
-        &:hover {
-          color: #542eee;
-          background: #fff;
+        position: relative;
+        &:before {
+          position: absolute;
+          content: "Lipsum Orems";
+          font-size: 2rem;
+          font-weight: bold;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: #ffffffee;
+          color: var(--deep-purple);
+          opacity: 0;
+          transition: var(--transition);
+        }
+        &:hover:before {
+          opacity: 1;
+        }
+
+        header {
+          margin: 0px !important;
+          display: block !important;
           h3 {
-            color: #542eee;
+            text-align: left;
           }
         }
         cursor: pointer;
@@ -47,18 +70,20 @@
         // border: 1px solid #fff;
         background-color: var(--glass);
         width: 48%;
-        max-width: 530px;
-        padding: 35px;
+        // max-width: 530px;
+        // padding: 35px;
+        height: var(--150px);
         overflow: hidden;
         grid-template-columns: 0.25fr 1fr;
-        grid-template-rows: 30px 1fr;
+        grid-auto-rows: auto;
         border-radius: 16px;
-        height: 148px;
+        // height: 148px;
         img {
           grid-column: 1;
           grid-row: 1 / span 2;
-          align-self: self-start;
+          align-self: center;
           justify-self: center;
+          filter: drop-shadow(0px 0px 30px var(--pink));
         }
         h3 {
           grid-column: 2;
@@ -67,7 +92,12 @@
         p {
           grid-column: 2;
           grid-row: 2;
-          font-size: 1rem;
+          max-width: 90%;
+          font-weight: 300;
+          font-size: 0.9rem;
+          line-height: 1.3rem;
+
+          align-self: flex-start;
         }
       }
     }

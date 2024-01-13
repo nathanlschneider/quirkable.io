@@ -1,9 +1,6 @@
-
 .about {
-
   header {
-	flex-direction: column;
-   
+    flex-direction: column;
   }
 
   &_inner {
@@ -17,12 +14,17 @@
 
     &_left {
       width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       .aboard {
       }
     }
 
     &_right {
+      width: 50%;
       .quote {
+        text-align: justify;
         padding: var(--40px);
         margin: 0 var(--20px);
         grid-column: 5/9;
@@ -43,7 +45,7 @@
           max-width: 65ch;
           & > li {
             position: relative;
-            margin-left: var(--28)px;
+            margin-left: var(--28) px;
             &:first-of-type p:before {
               content: "01";
               position: absolute;

@@ -52,7 +52,7 @@
   // background: linear-gradient(180deg, #d540ff 0%, #442ed0 100%);
   // overflow: hidden;
   // filter: drop-shadow(2px 4px 10px black);
-  // box-shadow: 0px 0px 153px #d540ff;
+  // box-shadow: 0px 0px 153px #d540ff;8
   // margin-top: var(--section-top);
   color: var(--light);
 
@@ -67,25 +67,6 @@
   form {
     #af-body-24915601 {
       display: flex;
-    }
-
-    input[type="text"] {
-      --height: 44px;
-      height: var(--height);
-      border-radius: calc(var(--height) * 0.5); /* 50% of height */
-      padding: 0 20px;
-    }
-    input[type="submit"] {
-      --height: 44px;
-      min-width: calc(var(--height) * 2); /* 2x height */
-      height: var(--height);
-      border-radius: calc(var(--height) * 0.5); /* 50% of height */
-      padding: 0 30px;
-      margin: 0 10px;
-      text-transform: uppercase;
-      font-weight: 700;
-      background-color: rgb(175, 23, 244);
-      color: #fff;
     }
   }
 }

@@ -43,36 +43,36 @@ const Panels = () => {
       <motion.header className={styles.header}>
         <div className="pre_headline">Development</div>
         <h2 className={lexend_deca.className}>
-          We develop ideas driven
+          We develop solutions
           <br />
-          by the future.
+          that empower.
         </h2>
       </motion.header>
       <section className={styles.panels_inner}>
         <motion.section ref={ref} variants={container} initial="hidden" animate={mainControl} className={styles.panel_wrapper}>
           <motion.article variants={item} className={styles.panel}>
-            <Image src="/images/socialmedia.webp" width={60} height={60} alt="" />
+            <Image src="/images/touch.png" width={80} height={80} alt="" />
             <header>
-              <h3>Social Proof</h3>
+              <h3>Interactive Design</h3>
             </header>
-            <p>Produce the highest quality work and services for every client, on every project.</p>
+            <p>Although presentation is important, usability doesn't mean interfaces can't be enjoyable; in fact, adding elements of fun can enhance the overall user experience</p>
           </motion.article>
           <motion.article variants={item} className={styles.panel}>
-            <Image src="/images/socialmedia.webp" width={60} height={60} alt="" />
+            <Image src="/images/blind2.svg" width={80} height={80} alt="" />
             <header>
-              <h3>Integration</h3>
+              <h3>Accessibility</h3>
             </header>
-            <p>Produce the highest quality work and services for every client, on every project.</p>
+            <p>Accessibility issues can impact not just end users but also developers. We make a conscious effort to prioritize accessibility for both front-facing and back-end applications and services</p>
           </motion.article>
           <motion.article variants={item} className={styles.panel}>
-            <Image src="/images/socialmedia.webp" width={60} height={60} alt="" />
+            <Image src="/images/adapt.svg" width={80} height={80} alt="" />
             <header>
-              <h3>Ecommerce</h3>
+              <h3>Adaptability</h3>
             </header>
-            <p>Produce the highest quality work and services for every client, on every project.</p>
+            <p>Future-proofing is crucial to our approach. We consistently look ahead while ensuring that legacy technology is not overlooked. This strategy enables us to design for a diverse array of systems and technologies</p>
           </motion.article>
           <motion.article variants={item} className={styles.panel}>
-            <Image src="/images/socialmedia.webp" width={60} height={60} alt="" />
+            <Image src="/images/socialmedia.webp" width={80} height={80} alt="" />
             <header>
               <h3>Customization</h3>
             </header>
