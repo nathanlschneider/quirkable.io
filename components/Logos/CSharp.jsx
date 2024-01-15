@@ -1,11 +1,31 @@
-const CSharp = (props) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={24}
-    height={28}
-    fill="none"
-    {...props}
-  >
+import { motion } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
+
+const CSharp = (props) => {
+  const { variants, className, delay } = props;
+  const [zindex, setZindex] = useState(0);
+
+  const doLoop = () => {
+    setInterval(() => {
+      setZindex(prevZindex => (prevZindex === 0 ? 1 : 0));
+    }, 4000);
+  };
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      doLoop();
+    }, delay);
+
+    // Clear the timeout if the component unmounts
+    return () => clearTimeout(timeoutId);
+  }, []); // Ensure the useEffect runs only once after the initial render
+
+
+  return (
+    <motion.article variants={variants} className={className} style={{ zIndex: zindex }}>
+     
+      
+       <svg xmlns="http://www.w3.org/2000/svg" width={128} height={128} fill="none" viewBox={"0 0 32 32"} {...props}>
     <path
       fill="#7F3A86"
       d="M23.695 21c.188-.338.305-.72.305-1.061V8.06c0-.342-.117-.723-.305-1.06L12 14l11.695 7Z"
@@ -29,5 +49,7 @@ const CSharp = (props) => (
       clipRule="evenodd"
     />
   </svg>
-)
-export default CSharp
+    </motion.article>
+  );
+};
+export default CSharp;
