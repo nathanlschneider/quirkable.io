@@ -7,7 +7,7 @@ const CSS3 = (props) => {
 
   const doLoop = () => {
     setInterval(() => {
-      setZindex(prevZindex => (prevZindex === 0 ? 1 : 0));
+      setZindex((prevZindex) => (prevZindex === 0 ? 100 : 0));
     }, 4000);
   };
 
@@ -19,7 +19,6 @@ const CSS3 = (props) => {
     // Clear the timeout if the component unmounts
     return () => clearTimeout(timeoutId);
   }, []); // Ensure the useEffect runs only once after the initial render
-
 
   return (
     <motion.article variants={variants} className={className} style={{ zIndex: zindex }}>

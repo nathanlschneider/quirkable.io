@@ -1,5 +1,4 @@
 .threecards {
-
   &_inner {
     display: flex;
     // justify-content: space-evenly;
@@ -24,12 +23,21 @@
       justify-content: space-between;
       opacity: 0;
       transform: translateX(-100px);
+      @media (max-width: 768px) {
+        flex-direction: column;
+      }
 
       .card {
         background: #ffffff12;
         padding: var(--40px);
-        border-radius: 20px;
+        border-radius: var(--border-radius);
         min-height: 35rem;
+        text-align: center;
+        display: grid;
+        grid-template-rows: var(--240px) 1fr;
+        @media (min-width: 769px) {
+          width: 30%;
+        }
         h3 {
           margin: 1rem 0rem;
         }
@@ -39,15 +47,10 @@
           opacity: 0;
           transform: scale(0);
         }
-        text-align: center;
-        width: 30%;
-        display: grid;
-        grid-template-rows: var(--240px) 1fr;
         p {
           min-height: var(--150px);
-		  line-height: 1.4rem
+          line-height: 1.4rem;
         }
-
         &_btn {
           display: inline-flex;
           justify-content: center;

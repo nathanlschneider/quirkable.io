@@ -12,13 +12,13 @@
   margin-top: var(--40px);
   &_inner {
     display: flex;
-    flex-direction: column;
+    // flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     // width: 70dvw;
     //max-width: 800px;
-    padding: 5% 10%;
-    border-radius: 20px;
+    padding: 4%;
+    border-radius: var(--border-radius);
     text-align: center;
     background: #ffffff11;
 

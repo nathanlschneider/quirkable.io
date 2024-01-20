@@ -44,7 +44,7 @@ const Asteroid = (props) => {
 				filter: src ? '0px' : `blur(${pairSize < 100 ? 3 : 0}px)`,
 				animationDuration: `${duration}s`,
 			}}>
-			<motion.div className={styles.asteroidWrapper} onClick={handleDestoryObject} variants={container} initial='hidden' animate='show' exit='destroy'>
+			<motion.div drag className={styles.asteroidWrapper} onClick={handleDestoryObject} variants={container} initial='hidden' animate='show' exit='destroy'>
 				<Image
 					id={`particle${id}`}
 					className={styles.cube}

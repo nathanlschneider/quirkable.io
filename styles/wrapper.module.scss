@@ -1,9 +1,10 @@
 .wrapper {
 	position: relative;
 	z-index: 9;
-	background: linear-gradient(36deg, #0a0335 10%, #3f20ad 49%, #cb00f4 97%);
-	padding: var(--section-top) 0px;
+	// background: linear-gradient(36deg, #0a0335 10%, #3f20ad 49%, #5e00f4 97%);
+	// padding: var(--section-top) 0px;
 	max-width: 1600px;
-	border-radius: 100px;
+	border-radius: var(--border-radius);
 	margin: 0 auto;
+	background: linear-gradient(235deg, rgba(255,175,0,1) 0%, rgb(135 0 201) 25%, rgb(78 32 227) 40%, rgb(25 0 84) 75%, rgba(0, 0, 0, 0.264) 100%);
 }

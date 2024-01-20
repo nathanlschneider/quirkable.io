@@ -76,6 +76,9 @@
 }
 
 .start {
+	@media (max-width: 2559px) {
+		// display: none;
+	}
 	& > * {
 		user-select: none;
 	}
@@ -146,7 +149,8 @@
 
 	&_inner {
 		// max-width: 1366px;
-		display: var(--display);
+		// display: var(--display);
+		display: flex;
 		width: 100dvw;
 		height: 100dvh;
 

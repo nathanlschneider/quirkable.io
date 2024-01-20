@@ -5,13 +5,13 @@ const NavLinks = (props) => {
 	return (
 		<>
 			<Link className={styles.nav_btn} href='/products'>
-				<span>products</span>
+				<span>Products</span>
 			</Link>
 			<Link className={styles.nav_btn} href='/support'>
-				<span>support</span>
+				<span>Support</span>
 			</Link>
 			<Link className={styles.nav_btn} href='#contact'>
-				<span>contact</span>
+				<span>Contact</span>
 			</Link>
 		</>
 	);

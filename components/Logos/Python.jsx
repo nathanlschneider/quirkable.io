@@ -7,7 +7,7 @@ const Python = (props) => {
 
   const doLoop = () => {
     setInterval(() => {
-      setZindex(prevZindex => (prevZindex === 0 ? 1 : 0));
+      setZindex(prevZindex => (prevZindex === 0 ? 100 : 0));
     }, 4000);
   };
 

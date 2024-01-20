@@ -28,9 +28,9 @@ const ThreeCards = (props) => {
       <header>
         <div className="pre_headline">Services</div>
         <h2 className={lexend_deca.className}>
-          We launch visionary ideas,
+          We launch visionary ideas
           <br />
-          propelling you towards the future.
+          propelling you towards the future
         </h2>
       </header>
       <section className={styles.threecards_inner}>

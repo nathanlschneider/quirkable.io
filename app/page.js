@@ -7,8 +7,7 @@ import WordScroller from "@components/WordScroller";
 import Contact from "@components/sections/Contact";
 import SectionWrapper from "@components/sections/SectionWrapper";
 import MotionWrapper from "@components/sections/MotionWrapper";
-import TechStack from "@components/sections/TechStack";
-
+import TechSection from "@components/sections/Tech Section/TechSection";
 export default function App() {
   return (
     <>
@@ -30,7 +29,7 @@ export default function App() {
           <WordScroller />
         </MotionWrapper> */}
         <MotionWrapper>
-          <TechStack />
+          <TechSection />
         </MotionWrapper>
         <MotionWrapper>
           <Contact />

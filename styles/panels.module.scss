@@ -76,7 +76,7 @@
         overflow: hidden;
         grid-template-columns: 0.25fr 1fr;
         grid-auto-rows: auto;
-        border-radius: 16px;
+        border-radius: var(--border-radius);
         // height: 148px;
         img {
           grid-column: 1;

@@ -12,8 +12,8 @@
 .pagecontent {
 	z-index: 9;
 	background-color: #ffffff;
-	border-top-right-radius: 60px;
-	border-top-left-radius: 60px;
+	border-top-right-radius:var(--border-radius);
+	border-top-left-radius: var(--border-radius);
 	margin: 0 auto;
 	max-width: var(--max-page-width);
 	padding: 4%;
@@ -30,14 +30,3 @@
     }
 }
 
-.btn {
-    letter-spacing: 1px;
-    background-color: rgb(56, 15, 203);
-    display: inline-block;
-    color: rgb(255, 255, 255);
-    font-size: 1.5rem;
-    padding: 20px 40px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: 600;
-}

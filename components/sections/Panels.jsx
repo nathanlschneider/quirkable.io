@@ -45,7 +45,7 @@ const Panels = () => {
         <h2 className={lexend_deca.className}>
           We develop solutions
           <br />
-          that empower.
+          that empower
         </h2>
       </motion.header>
       <section className={styles.panels_inner}>

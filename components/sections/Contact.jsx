@@ -14,7 +14,7 @@ const Contact = () => {
         <Image className={styles.astro_mail} src="/images/mail.png" width={300} height={300} alt="" />
         <header>
           <h2 className={lexend_deca.className}>Need some work done?</h2>
-          <h3>Drop a message.</h3>
+          <h3>Drop a message</h3>
         </header>
         </div>
         <section style={{ display: "flex", alignItems: "center" }}>

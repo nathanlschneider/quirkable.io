@@ -6,7 +6,7 @@
   position: relative;
   z-index: 9;
   section {
-    max-width: var(--1366px);
+    max-width: var(--1600px);
     margin: 0 auto;
   }
   &_logo {
@@ -18,20 +18,22 @@
     max-width: var(--max-page-width);
     padding: var(--section-pad);
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 50% 25% 25%;
+  }
+  .leftgroup {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   .footer_links,
   .footer_links ul {
     display: flex;
     flex-direction: column;
   }
-  .menu_header {
-    color: #097cff;
-    font-size: 1.1rem;
-    font-weight: 700;
-    letter-spacing: 0.6px;
-    text-transform: uppercase;
-    margin-bottom: 10px;
+  .small_links {
+    & > * {
+      font-size: var(--12px);
+    }
   }
   a {
     display: flex;
@@ -57,12 +59,12 @@
   color: var(--light);
 
   h2 {
-    font-size: 64px;
-    margin-bottom: 20px;
+    font-size: var(--64px);
+    margin-bottom: var(--20px);
   }
   p {
-    font-size: 18px;
-    margin-bottom: 20px;
+    font-size: var(--18px);
+    margin-bottom: var(--20px);
   }
   form {
     #af-body-24915601 {

@@ -22,7 +22,7 @@ const AccountMenu = (props) => {
   return (
     <>
       <span onClick={() => handleOpen()}>
-      {userImage ? <Image style={{ borderRadius: "60px", zIndex: '99999'}} src={userImage} alt={userName} width={45} height={45} /> : <AccountCircleIcon sx={{fontSize: "45px"}}/>}
+      {userImage ? <Image style={{ borderRadius: "var(--border-radius)", zIndex: '99999'}} src={userImage} alt={userName} width={45} height={45} /> : <AccountCircleIcon sx={{fontSize: "45px"}}/>}
       </span>
       <div
         className={styles.account_menu}

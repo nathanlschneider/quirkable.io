@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useRef, useEffect } from "react";
 
@@ -9,7 +9,7 @@ const MotionWrapper = ({ children }) => {
 
   const animationVariants = {
     visible: { opacity: 1, y: 0 },
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0, y: 50},
   };
 
   useEffect(() => {
@@ -21,7 +21,7 @@ const MotionWrapper = ({ children }) => {
   }, [controls, inView]);
 
   return (
-    <motion.div ref={ref} initial="hidden" animate={controls} variants={animationVariants} transition={{ duration: 1 }}>
+    <motion.div ref={ref} style={{padding: 'var(--80px) 0px'}} initial="hidden" animate={controls} variants={animationVariants} transition={{ duration: 1 }}>
       {children}
     </motion.div>
   );

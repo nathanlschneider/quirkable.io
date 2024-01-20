@@ -1,174 +1,175 @@
-
-
 .nav_btn {
-	display: inline-block;
-	margin-right: 20px;
+  display: inline-block;
+  margin-right: 20px;
 }
 .logo {
-	display: flex;
-	align-items: center;
-	justify-content: flex-start;
-	&_image {
-		fill: #ffffff;
-		width: 50px;
-	}
-	&_title {
-		color: #fff;
-		font-weight: bolder;
-		font-size: var(--36px);
-		margin-left: 3px;
-	}
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  &_image {
+    fill: #ffffff;
+    width: 50px;
+  }
+  &_title {
+    color: #fff;
+    font-weight: bolder;
+    font-size: var(--36px);
+    margin-left: 3px;
+  }
 }
 .user {
-	&_name {
-		padding: 20px 40px 3px 40px;
-		font-weight: 700;
-		text-align: center;
-	}
-	&_email {
-		text-align: center;
-		font-size: 12px;
-		padding: 0px 40px;
-	}
+  &_name {
+    padding: 20px 40px 3px 40px;
+    font-weight: 700;
+    text-align: center;
+  }
+  &_email {
+    text-align: center;
+    font-size: 12px;
+    padding: 0px 40px;
+  }
 }
 
 .account_menu {
-	// overflow: hidden;
-	z-index: -1;
-	min-width: 214px;
-	transition: var(--transition);
-	position: absolute;
-	background: #f6ebff;
-	color: var(--deep-purple);
-	border-radius: 10px;
-	top: 85px;
-	.account_list {
-		margin-top: 0px;
-		li {
-			cursor: pointer;
-			&:last-of-type {
-				border-bottom-right-radius: 10px;
-				border-bottom-left-radius: 10px;
-			}
-			transition: var(--transition);
-			&:not(:last-of-type) {
-				margin-bottom: 10px;
-			}
-			a {
-				text-align: center;
-				display: block;
-				padding: 20px;
-			}
-			&:hover {
-				background-color: var(--deep-purple);
-				color: #f6ebff;
-			}
-		}
-	}
-	&:before {
-		content: "";
-		width: 0;
-		height: 0;
-		border-left: 10px solid transparent;
-		border-right: 10px solid transparent;
-		border-bottom: 10px solid #f6ebff;
-		position: absolute;
-		top: -10px;
-		left: calc(50% - 10px);
-	}
+  // overflow: hidden;
+  z-index: -1;
+  min-width: 214px;
+  transition: var(--transition);
+  position: absolute;
+  background: #f6ebff;
+  color: var(--deep-purple);
+  border-radius: var(--border-radius);
+  top: 85px;
+  .account_list {
+    margin-top: 0px;
+    li {
+      cursor: pointer;
+      &:last-of-type {
+        border-bottom-right-radius: var(--border-radius);
+        border-bottom-left-radius: var(--border-radius);
+      }
+      transition: var(--transition);
+      &:not(:last-of-type) {
+        margin-bottom: 10px;
+      }
+      a {
+        text-align: center;
+        display: block;
+        padding: 20px;
+      }
+      &:hover {
+        background-color: var(--deep-purple);
+        color: #f6ebff;
+      }
+    }
+  }
+  &:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #f6ebff;
+    position: absolute;
+    top: -10px;
+    left: calc(50% - 10px);
+  }
 }
 
 .nav {
-	filter: drop-shadow(2px 4px 6px #00000055);
-	color: var(--nav-logo-color);
-	position: var(--nav-position);
-	z-index: 999999;
-	transition: var(--transition);
-	background-color: var(--nav-bg-color);
-	position: var(--nav-position);
-	height: var(--nav-height);
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	width: 100%;
-	padding: var(--main-pad);
-	margin: 0 auto;
-	top: var(--top);
-	mix-blend-mode: var(--mix-mode);
-	visibility: var(--visibility);
+  filter: drop-shadow(2px 4px 6px #00000055);
+  color: var(--nav-logo-color);
+  position: var(--nav-position);
+  z-index: 999999;
+  transition: var(--transition);
+  background-color: var(--nav-bg-color);
+  position: var(--nav-position);
+  height: var(--nav-height);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: var(--main-pad);
+  margin: 0 auto;
+  top: var(--top);
+  mix-blend-mode: var(--mix-mode);
+  visibility: var(--visibility);
+  @media (max-width: 480px) {
+    background-color: #000000db;
+  }
 
-	&_left {
-		display: flex;
-		justify-content: flex-start;
-		align-items: center;
-		z-index: 999;
-		position: relative;
-		width: fit-content;
-	}
+  &_left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 999;
+    position: relative;
+    width: fit-content;
+  }
 
-	&_right {
-		display: flex;
-		justify-content: flex-end;
-		align-items: center;
-		color: inherit;
-		font-size: 30px;
-		@media (max-width: 930px) {
-			display: none;
-		}
-	}
+  &_right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: inherit;
+    font-size: 30px;
+    @media (max-width: 930px) {
+      display: none;
+    }
+  }
 }
 
 #burger {
-	padding: 10px;
-	cursor: pointer;
-	@media (min-width: 750px) {
-		display: none;
-	}
-	.blade {
-		transition: 1s;
-		width: 30px;
-		height: 2px;
-		transform-origin: center;
-		animation-fill-mode: forwards;
-		background-color: #000;
-		&:nth-of-type(1) {
-			transform: translateY(-4px);
-		}
-		&:nth-of-type(2) {
-			transform: translateY(0px);
-		}
-		&:nth-of-type(3) {
-			transform: translateY(4px);
-		}
-	}
+  padding: 10px;
+  cursor: pointer;
+  @media (min-width: 750px) {
+    display: none;
+  }
+  .blade {
+    transition: 1s;
+    width: 30px;
+    height: 2px;
+    transform-origin: center;
+    animation-fill-mode: forwards;
+    background-color: #000;
+    &:nth-of-type(1) {
+      transform: translateY(-4px);
+    }
+    &:nth-of-type(2) {
+      transform: translateY(0px);
+    }
+    &:nth-of-type(3) {
+      transform: translateY(4px);
+    }
+  }
 }
 .active {
-	animation: burgerForward 0.8s;
-	.blade {
-		background-color: #fff !important;
-		&:nth-of-type(1) {
-			animation: bladeAF 0.5s;
-		}
-		&:nth-of-type(2) {
-			animation: bladeBF 0.5s;
-		}
-		&:nth-of-type(3) {
-			animation: bladeCF 0.5s;
-		}
-	}
+  animation: burgerForward 0.8s;
+  .blade {
+    background-color: #fff !important;
+    &:nth-of-type(1) {
+      animation: bladeAF 0.5s;
+    }
+    &:nth-of-type(2) {
+      animation: bladeBF 0.5s;
+    }
+    &:nth-of-type(3) {
+      animation: bladeCF 0.5s;
+    }
+  }
 }
 .reverse {
-	animation: burgerReverse 1s;
-	.blade {
-		background-color: #000;
-		&:nth-of-type(1) {
-			animation: bladeAR 0.5s;
-		}
-		&:nth-of-type(2) {
-			animation: bladeBR 0.5s;
-		}
-		&:nth-of-type(3) {
-			animation: bladeCR 0.5s;
-		}
-	}
+  animation: burgerReverse 1s;
+  .blade {
+    background-color: #000;
+    &:nth-of-type(1) {
+      animation: bladeAR 0.5s;
+    }
+    &:nth-of-type(2) {
+      animation: bladeBR 0.5s;
+    }
+    &:nth-of-type(3) {
+      animation: bladeCR 0.5s;
+    }
+  }
 }
