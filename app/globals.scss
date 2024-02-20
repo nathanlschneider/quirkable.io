@@ -1,4 +1,4 @@
-@import "node_modules/modern-normalize/modern-normalize.css";
+@import "reset.css";
 @import "preflight.css";
 @import "reduced-motion.css";
 @import "conversion.css";
@@ -197,7 +197,7 @@ button[type="submit"] {
   height: var(--height);
   border-radius: calc(var(--height) * 0.5); /* 50% of height */
   padding: 0 30px;
-  margin: 0 10px;
+  // margin: 0 10px;
   text-transform: uppercase;
   font-weight: 700;
   background-color: var(--pink);

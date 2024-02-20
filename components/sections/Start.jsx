@@ -42,8 +42,8 @@ const Start = (props) => {
     // <Asteroid key={1003} src='/images/heart.png' alt='Social Heart' />,
     // <Asteroid key={1004} src='/images/code.png' alt='Code' />,
     // <Asteroid key={1005} src='/images/emoji.png' alt='Emoji' />,
-    <Asteroid key={1006} src="/images/hashtag.png" alt="Hashtag" />,
-    <Asteroid key={1007} src="/images/at.png" alt="@" />,
+    // <Asteroid key={1006} src="/images/hashtag.png" alt="Hashtag" />,
+    // <Asteroid key={1007} src="/images/at.png" alt="@" />,
   ];
 
   const container = {
@@ -76,12 +76,12 @@ const Start = (props) => {
           <motion.div variants={container} initial="hidden" animate="show" transition={{ delay: 1 }} className={styles.plus_wrapper}>
             <Image className={styles.plus} src="/images/plus.png" width={950} height={1050} alt="" />
           </motion.div>
-          <Image className={styles.rocket} src="/images/rocket.png" width={400} height={400} alt="Space Rocket" />
-          <Image className={styles.rocket_small} src="/images/rocket.png" width={400 / 3} height={400 / 3} alt="Space Rocket" />
+          {/* <Image className={styles.rocket} src="/images/rocket.png" width={400} height={400} alt="Space Rocket" /> */}
+          {/* <Image className={styles.rocket_small} src="/images/rocket.png" width={400 / 3} height={400 / 3} alt="Space Rocket" /> */}
           <motion.div variants={container} initial="hidden" animate="show" className={styles.plus_wrapper_b}>
             <Image className={styles.plus_b} src="/images/plus.png" width={950 / 2} height={1050 / 2} alt="" />
           </motion.div>
-          <Image className={styles.astro_float} src="/images/laptop.webp" width={256} height={361} alt="" />
+          {/* <Image className={styles.astro_float} src="/images/laptop.webp" width={256} height={361} alt="" /> */}
           {asteroidField}
         </section>
       </section>

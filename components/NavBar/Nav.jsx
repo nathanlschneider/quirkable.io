@@ -1,7 +1,6 @@
 'use client';
 import Burger from "@components/NavBar/Burger";
 import styles from "@styles/nav.module.scss";
-import UserLogin from "./UserLogin";
 import NavLinks from "@components/NavBar/NavLinks";
 import LinkedLogo from "@components/NavBar/LinkedLogo";
 
@@ -13,7 +12,7 @@ const Nav = (props) => {
 			</div>
 			<div className={styles.nav_right}>
 				<NavLinks />
-				<UserLogin />
+	
 			</div>
 		</nav>
 	);

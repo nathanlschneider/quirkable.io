@@ -1,20 +1,20 @@
 form.form {
   padding: 40px;
-  border: 2px solid #e7ecf0
+  // border: 2px solid #e7ecf0
 }
 
 input.input,
 textarea.textarea {
-  width: 100%;
-  border: 2px solid #6250f42e;
-  padding: 15px 10px;
+  // width: 100%;
+  // border: 2px solid #6250f42e;
+  // padding: 15px 10px;
   border-radius: 5px;
   color: var(--deep-purple);
   font-weight: 600;
   font-size: 13px;
-  background-color: #f5f6f7;
+  // background-color: #f5f6f7;
    &:focus {
-     border: 2px solid var(--deep-purple);
+    //  border: 2px solid var(--deep-purple);
   }
 
   &::placeholder {

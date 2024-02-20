@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "@styles/nav.module.scss";
-import { signOut } from "next-auth/react"
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ContactPageIcon from '@mui/icons-material/ContactPage';
 import PaidIcon from '@mui/icons-material/Paid';

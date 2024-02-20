@@ -27,16 +27,17 @@ const EmailForm = () => {
         <input type="hidden" name="meta_tooltip" value="email||Email" />
       </div>
       <div id="af-form-24915601" className="af-form">
-        <div id="af-body-24915601" className="af-body af-standards" style={{display: "flex"}}>
+        <div id="af-body-24915601" className="af-body af-standards" style={{display: "flex", justifyContent: "space-between"}}>
           <div className="af-element">
             <label className="previewLabel" htmlFor="awf_field-116042191"></label>
             <div className="af-textWrap">
               <input
+              style={{width: "100%"}}
                 className={ui.input}
                 id="awf_field-116042191"
                 type="text"
                 name="email"
-                tabIndex="500"
+                tabIndex="0"
                 
                 placeholder="Email"
                 // defaultValue="Email"
@@ -45,7 +46,7 @@ const EmailForm = () => {
             <div className="af-clear"></div>
           </div>
           <div className="af-element buttonContainer">
-            <input style={{cursor: "pointer"}} name="submit" className="submit" type="submit" value="Submit" tabIndex="501" />
+            <input style={{cursor: "pointer"}} name="submit" className="submit" type="submit" value="Submit" tabIndex="501"/>
             <div className="af-clear"></div>
           </div>
         </div>

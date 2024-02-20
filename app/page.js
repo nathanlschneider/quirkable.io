@@ -13,9 +13,9 @@ export default function App() {
     <>
       <Start showHero={true} />
       <SectionWrapper>
-        <MotionWrapper>
+       {/* <MotionWrapper>
           <About />
-        </MotionWrapper>
+        </MotionWrapper> 
         <MotionWrapper>
           <ThreeCards />
         </MotionWrapper>
@@ -24,16 +24,16 @@ export default function App() {
         </MotionWrapper>
         <MotionWrapper>
           <Panels />
-        </MotionWrapper>
+        </MotionWrapper> */}
         {/* <MotionWrapper>
           <WordScroller />
         </MotionWrapper> */}
-        <MotionWrapper>
+        {/* <MotionWrapper>
           <TechSection />
-        </MotionWrapper>
-        <MotionWrapper>
+        </MotionWrapper> */}
+        {/* <MotionWrapper>
           <Contact />
-        </MotionWrapper>
+        </MotionWrapper> */}
       </SectionWrapper>
     </>
   );

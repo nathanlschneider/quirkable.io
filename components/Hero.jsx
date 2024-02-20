@@ -43,13 +43,13 @@ const Hero = (props) => {
   const heroPhrases = Array(
     ["Achieve", "More", "with", "Your", "Website."],
     ["Drive", "Results,", "Not", "Just", "Traffic."],
-    ["Using", "Our", "Powerful", "Plugins"],
-    ["and", "Supercharged", "Services,"],
-    ["Blast", "Off", "to", "Success!"]
+    ["Developer", "Focused", "B2B", "Tools"],
+    ["Achieve", "More", "with", "Your", "Website."],
+    ["Drive", "Results,", "Not", "Just", "Traffic."],
+    ["Developer", "Focused", "B2B", "Tools"],
   );
 
   useEffect(() => {
-    console.log("Interval Satrted");
     let counter = 0;
     wordRef_0.current.innerHTML = `${typeof heroPhrases[counter][0] !== "undefined" ? heroPhrases[counter][0] : ""}`;
     wordRef_1.current.innerHTML = `${typeof heroPhrases[counter][1] !== "undefined" ? heroPhrases[counter][1] : ""}`;
