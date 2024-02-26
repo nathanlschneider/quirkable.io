@@ -13,7 +13,7 @@ export default function App() {
     <>
       <Start showHero={true} />
       <SectionWrapper>
-       <MotionWrapper>
+       {/* <MotionWrapper>
           <About />
         </MotionWrapper> 
         <MotionWrapper>
@@ -24,7 +24,7 @@ export default function App() {
         </MotionWrapper>
         <MotionWrapper>
           <Panels />
-        </MotionWrapper>
+        </MotionWrapper> */}
         {/* <MotionWrapper>
           <WordScroller />
         </MotionWrapper> */}
