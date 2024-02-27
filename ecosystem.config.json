@@ -1,7 +1,0 @@
-module.exports = {
-  apps : [{
-    name   : "quirkable.io-nextjs",
-    script : "npm",
-    args: "start",
-  }]
-}
